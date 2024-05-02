@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{EE9981EF-0B32-9577-CC92-AAB6BB70FC18}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/Camera_movment.cs">
+    <Files>
+      <File FileName="Assets/Code/Camera_movment.cs" Line="21" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a989b03b-99db-46af-8811-eeab9860e2bf" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
