@@ -9,15 +9,23 @@ public class Camera_movment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //gets the wasd input
+        //gets the arrow key input
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
+        // getting the camrea forwards and right vectors
+        Vector3 forward = transform.forward;
+        Vector3 right = transform.right;
+
+        //ingores the camera vertical vector
+        forward.y = 0;
+        forward.Normalize();
+
         //caclulaits the move direction
-        Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+        Vector3 moveDirection = (forward * verticalInput + right * horizontalInput).normalized;
 
         // Move the camera
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
 
 
