@@ -5,13 +5,69 @@ using UnityEngine;
 public class Camera_movment : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float zoomSpeed = 10f;
+    public float maxZoom = 10f;
+    public float minZoom = 2f;
     
     // Update is called once per frame
     void Update()
     {
-        //gets the arrow key input
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // Getting the arrow key input
+        float verticalInput = 0f;
+        float horizontalInput = 0f;
+
+        // Checking for arrow key presses for vertical movement
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+        {
+            verticalInput = Input.GetKey(KeyCode.UpArrow) ? 1f : -1f;
+        }
+
+        // Checking for arrow key presses for horrazontal
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            horizontalInput = Input.GetKey(KeyCode.LeftArrow) ? -1f : 1f;
+        }
+
+        // edge scrolling with mouse
+
+        //horizontal mouse Input
+        if(Input.mousePosition.x <= 0)
+        {
+            horizontalInput = -1f;
+        }
+
+        else if(Input.mousePosition.x >= Screen.width - 1)
+        {
+            horizontalInput = 1f;
+        }
+
+        //vertical mouse input
+        if(Input.mousePosition.y <= 0)
+        {
+            verticalInput = -1f;
+        }
+
+        else if(Input.mousePosition.y >= Screen.height - 1)
+        {
+            verticalInput = 1f;
+        }
+
+        //Zooming 
+        float scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
+        if(scrollWheelInput!= 0f)
+        {
+            ZoomCamera(scrollWheelInput);
+        }
+        //zooming with keyboard X and Z
+        if (Input.GetKey(KeyCode.Z))
+        {
+            ZoomCamera(1f);
+            
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            ZoomCamera(-1f);
+        }
 
         // getting the camrea forwards and right vectors
         Vector3 forward = transform.forward;
@@ -27,7 +83,15 @@ public class Camera_movment : MonoBehaviour
         // Move the camera
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
+        void ZoomCamera(float zoomAmount)
+        {
+            // updates camera postion with zoom
+            Vector3 newPosition = transform.position + transform.forward * zoomAmount * zoomSpeed * Time.deltaTime;
+            newPosition.y = Mathf.Clamp(newPosition.y, minZoom, maxZoom);
 
+            // move the camera
+            transform.position = newPosition;
+        }
 
     }
 }
