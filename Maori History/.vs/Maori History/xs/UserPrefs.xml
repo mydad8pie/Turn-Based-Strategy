@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{EE9981EF-0B32-9577-CC92-AAB6BB70FC18}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/Camera_movment.cs">
     <Files>
-      <File FileName="Assets/Code/Camera_movment.cs" Line="59" Column="42" />
-      <File FileName="Assets/Code/HexGrid.cs" Line="42" Column="1" />
+      <File FileName="Assets/Code/Camera_movment.cs" Line="89" Column="99" />
+      <File FileName="Assets/Code/HexGrid.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="57e568d0-4475-43be-ad0e-35dceec72928" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="98d80cf8-41f2-4d75-9219-ab3a4fec13ef" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
