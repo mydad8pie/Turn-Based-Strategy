@@ -23,13 +23,13 @@ public class HexGrid : MonoBehaviour
             for (int col = 0; col < numColumns; col++)
             {
                 // Calculate position for each hexagon based on row and column
-                float xPos = col * xOffset;
+                float xPos = col * xOffset * 0.75f ;
                 float yPos = row * yOffset;
 
                 // Apply an offset to every other row
-                if (row % 2 != 0)
+                if (row % 2 == 1)
                 {
-                    xPos += xOffset * 0.5f;
+                    xPos += xOffset * 0.75f * 0.5f;
                 }
 
                 // Instantiate hexagon at calculated position
