@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{EE9981EF-0B32-9577-CC92-AAB6BB70FC18}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/Camera_movment.cs">
     <Files>
-      <File FileName="Assets/Code/Camera_movment.cs" Line="89" Column="99" />
+      <File FileName="Assets/Code/Camera_movment.cs" Line="109" Column="2" />
       <File FileName="Assets/Code/HexGrid.cs" />
+      <File FileName="Assets/Code/CameraAngle.cs" Line="14" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="98d80cf8-41f2-4d75-9219-ab3a4fec13ef" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cb617d2d-1869-4603-9e2b-5fff3e2834b1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

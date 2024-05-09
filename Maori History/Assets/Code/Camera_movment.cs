@@ -6,9 +6,9 @@ public class Camera_movment : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float zoomSpeed = 10f;
-    public float maxZoom = 50f;
+    public float maxZoom = 20f;
     public float minZoom = 2f;
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +19,8 @@ public class Camera_movment : MonoBehaviour
         // apply movement
         MoveCamera(verticalInput, horizontalInput);
 
-        //Zooming 
+        // Zooming
+        // Scroll Wheel zoom control
         float scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
         if (scrollWheelInput != 0f)
         {
@@ -37,12 +38,13 @@ public class Camera_movment : MonoBehaviour
         }
 
     }
+    //
     float GetVerticalInput()
     {
         // Checking for arrow key presses for vertical movement
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
         {
-             return Input.GetKey(KeyCode.UpArrow) ? 1f : -1f;
+            return Input.GetKey(KeyCode.UpArrow) ? 1f : -1f;
         }
         //vertical mouse input
         if (Input.mousePosition.y <= 0)
