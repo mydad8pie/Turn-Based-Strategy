@@ -1,5 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
+using System;
+using System.Collections.Generic;
 
 public class HexGrid : MonoBehaviour
 {
@@ -15,9 +17,14 @@ public class HexGrid : MonoBehaviour
 
     Canvas gridCanvas;
 
+    HexMesh hexMesh;
+
     void Awake() {
+
         cells = new HexCell[height * width];
         gridCanvas = GetComponentInChildren<Canvas>();
+
+        hexMesh = GetComponentInChildren<HexMesh>();
 
         for (int z = 0, i = 0; z < height; z++){
             for (int x = 0; x < width; x++){
@@ -29,19 +36,25 @@ public class HexGrid : MonoBehaviour
     }
     void CreateCell (int x, int z, int i){
         Vector3 position;
-        position.x = x * (HexMetrics.innerRadius * 2f);
+        position.x = (x + z * 0.5f - z / 2) * (HexMetrics.innerRadius * 2f);
         position.y = 0f;
         position.z = z * (HexMetrics.outerRadius * 1.5f);
         
         HexCell cell = cells[i] = Instantiate<HexCell>(cellPrefab);
         cell.transform.SetParent(transform, false);
         cell.transform.localPosition = position;
+        cell.coordinates = HexCoordinates.FromOffsetCoordinates(x, z);
 
         Text Label = Instantiate<Text>(cellLabelPrefab);
         Label.rectTransform.SetParent(gridCanvas.transform, false);
-        Label.rectTransform.anchoredPosition = new Vector2(position.x, position.z);
-        Label.text = x.ToString() + "\n" + z.ToString();
+        Label.rectTransform.anchoredPosition = 
+            new Vector2(position.x, position.z);
+        Label.text = cell.coordinates.ToStringOnSeparateLines();
 
     }
-    
+
+    void Start () {
+        hexMesh.Triangulate(cells);
+        
+    }
 }
