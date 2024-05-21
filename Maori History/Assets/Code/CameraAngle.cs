@@ -28,6 +28,8 @@ public class CameraAngle : MonoBehaviour
         {
             currentRotation.x = 45f;
             isRotated = false;
+
+            
         }
         transform.eulerAngles = currentRotation;
     }

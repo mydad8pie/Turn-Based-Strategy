@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -102,8 +103,21 @@ public class Camera_movment : MonoBehaviour
         Vector3 newPosition = transform.position + transform.forward * zoomAmount * zoomSpeed * Time.deltaTime;
         newPosition.y = Mathf.Clamp(newPosition.y, minZoom, maxZoom);
 
+        if(newPosition.y == minZoom || newPosition.y == maxZoom)
+        {
+            newPosition.z = transform.position.z;
+          
+        }
+        
+
+
+
         // move the camera
         transform.position = newPosition;
+
+        
+        
     }
+    
 
 }
