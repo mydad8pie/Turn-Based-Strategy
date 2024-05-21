@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Camera_movment : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float zoomSpeed = 10f;
-    public float maxZoom = 20f;
+    public float maxZoom = 40f;
     public float minZoom = 2f;
+    private bool isRotated = false;
 
     // Update is called once per frame
     void Update()
@@ -36,6 +38,18 @@ public class Camera_movment : MonoBehaviour
         else if (Input.GetKey(KeyCode.X))
         {
             ZoomCamera(-1f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            RotateCamera();
+        }
+
+        if (!isRotated && transform.position.y > 40f)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.y = 40f;
+            transform.position = newPosition;
         }
 
     }
@@ -84,10 +98,18 @@ public class Camera_movment : MonoBehaviour
     {
         Vector3 forward = transform.forward;
         Vector3 right = transform.right;
-
-        //ingores the camera vertical vector
-        forward.y = 0;
-        forward.Normalize();
+       
+       // ingores the camera vertical vector when the camera is not rotated
+        if (!isRotated)
+        {
+            forward.y = 0;
+             forward.Normalize();
+        }
+        else
+        {
+            forward = transform.up;
+        }
+       
 
         //caclulaits the move direction
         Vector3 moveDirection = (forward * verticalInput + right * horizontalInput).normalized;
@@ -108,15 +130,39 @@ public class Camera_movment : MonoBehaviour
             newPosition.z = transform.position.z;
           
         }
+
+        if(isRotated){
+            maxZoom = 60f;
+        }
+        else
+        {
+            maxZoom = 40f;
+        }
         
-
-
 
         // move the camera
         transform.position = newPosition;
 
         
         
+    }
+
+    public void RotateCamera()
+    {
+        Vector3 currentRotation = transform.eulerAngles;
+        if (!isRotated)
+        {
+            currentRotation.x = 90f;
+            isRotated = true;
+        }
+        else
+        {
+            currentRotation.x = 45f;
+            isRotated = false;
+
+            
+        }
+        transform.eulerAngles = currentRotation;
     }
     
 

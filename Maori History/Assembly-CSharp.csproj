@@ -104,7 +104,6 @@
     <Compile Include="Assets/Code/Map Gen/HexCell.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Code/Map Gen/HexMesh.cs" />
-    <Compile Include="Assets/Code/CameraAngle.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>
