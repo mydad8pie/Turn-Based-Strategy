@@ -16,8 +16,17 @@ public class TurnManager : MonoBehaviour
 
     void Start()
     {
+        currentPlayerIndex = 0;
         //start the turn routine to manage the turns
         StartCoroutine(TurnRoutine());
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Tab) && currentPlayerIndex == 0 && !playerHasCompletedTurn)
+        {
+            EndPlayerTurn();
+        }
     }
 
     IEnumerator TurnRoutine()
@@ -27,7 +36,7 @@ public class TurnManager : MonoBehaviour
             if(currentPlayerIndex == 0)// check if the current player is a human player
             {
                 // Start the player turn
-                StartPLayerTurn(currentPlayerIndex);
+                StartPlayerTurn(currentPlayerIndex);
 
                 // Wait until the player has completed their turn
                 yield return new WaitUntil(() => playerHasCompletedTurn);
@@ -40,7 +49,7 @@ public class TurnManager : MonoBehaviour
                 StartComputerTurn(currentPlayerIndex);
 
                 // Simulate time for comuter turn
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(6f);
             }
 
             // move to the next player
@@ -50,7 +59,7 @@ public class TurnManager : MonoBehaviour
     }
 
     // a function to start the player turn
-    void StartPLayerTurn(int playerIndex)
+    void StartPlayerTurn(int playerIndex)
     {
         Debug.Log("Player " + playerIndex + " turn has started");
     }
@@ -70,8 +79,9 @@ public class TurnManager : MonoBehaviour
     }
 
     // a function to end the player turn
-    public void EndPLayerTurn()
+    public void EndPlayerTurn()
     {
+
         Debug.Log("Player " + currentPlayerIndex + " turn has ended");
         playerHasCompletedTurn = true;
     }

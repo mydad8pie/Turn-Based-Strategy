@@ -47,5 +47,32 @@ public struct HexCoordinates
      
 
 
+     public static HexCoordinates FromPosition(Vector3 position){
+        float x = position.x / (HexMetrics.innerRadius * 2f);
+        float y = -x;
+
+        float offset = position.z / (HexMetrics.outerRadius * 3f);
+        x -= offset;
+        y -= offset;
+
+        int iX = Mathf.RoundToInt(x);
+        int iY = Mathf.RoundToInt(y);
+        int iZ = Mathf.RoundToInt(-x - y); 
+
+        if (iX + iY + iZ !=0){
+           float dx = Mathf.Abs(x - iX);
+           float dy = Mathf.Abs(y - iY);
+           float dz = Mathf.Abs(-x - y - iZ);
+
+           if (dx > dy && dx > dz){
+               iX = -iY - iZ;
+           } else if (dz > dy){
+               iZ = -iX - iY;
+           }
+        }
+        return new HexCoordinates(iX, iZ);
+    }
+
+
 }
 
