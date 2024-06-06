@@ -354,6 +354,7 @@
 "Assets/Code/Camera_movment.cs"
 "Assets/Code/Map Gen/HexCell.cs"
 "Assets/Code/Map Gen/HexCoordinates.cs"
+"Assets/Code/Map Gen/HexDirection.cs"
 "Assets/Code/Map Gen/HexGrid.cs"
 "Assets/Code/Map Gen/HexMapEditor.cs"
 "Assets/Code/Map Gen/HexMesh.cs"

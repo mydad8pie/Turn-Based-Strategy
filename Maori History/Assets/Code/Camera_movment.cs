@@ -11,10 +11,25 @@ public class Camera_movment : MonoBehaviour
     public float maxZoom = 40f;
     public float minZoom = 2f;
     private bool isRotated = false;
+    private bool isPaused = false;
+
+
+    //void Start()
+    //{
+    //    LockCursor();
+    //}
 
     // Update is called once per frame
     void Update()
     {
+        
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+            //TogglePause();
+        //}
+
+        //if (isPaused) return;
+        
         // Getting the arrow key input
         float verticalInput = GetVerticalInput();
         float horizontalInput = GetHorizontalInput();
@@ -53,6 +68,32 @@ public class Camera_movment : MonoBehaviour
         }
 
     }
+    void TogglePause()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
+        {
+            UnlockCursor();
+            Time.timeScale = 0f;//pasue game
+        }
+        else
+        {
+            LockCursor();
+            Time.timeScale = 1f;//resume game
+        }
+    }
+    void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    
     //
     float GetVerticalInput()
     {
