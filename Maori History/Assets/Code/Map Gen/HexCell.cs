@@ -10,6 +10,23 @@ public class HexCell : MonoBehaviour
     
     public Color color;
 
+    int elevation;
+
+    public int Elevation
+    {
+        get
+        {
+            return elevation;
+        }
+        set
+        {
+            elevation = value;
+            Vector3 position = transform.localPosition;
+            position.y = value * HexMetrics.elevationStep;
+            transform.localPosition = position;
+        }
+    }
+
     [SerializeField] HexCell[] neighbors;
 
     public HexCell GetNeighbor(HexDirection direction)
