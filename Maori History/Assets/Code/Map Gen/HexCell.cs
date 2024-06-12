@@ -33,6 +33,15 @@ public class HexCell : MonoBehaviour
         }
     }
 
+    public HexEdgeType GetEdgeType (HexDirection direction){
+		return HexMetrics.GetEdgeType(elevation, neighbors[(int)direction].elevation);
+	}
+
+    public HexEdgeType GetEdgeType(HexCell otherCell)
+    {
+        return HexMetrics.GetEdgeType(elevation, otherCell.elevation);
+    }
+
     [SerializeField] HexCell[] neighbors;
 
     public HexCell GetNeighbor(HexDirection direction)
@@ -44,5 +53,9 @@ public class HexCell : MonoBehaviour
         neighbors[(int)direction] = cell;
         cell.neighbors[(int)direction.Opposite()] = this;
     }
+
+    
   
 }
+
+
