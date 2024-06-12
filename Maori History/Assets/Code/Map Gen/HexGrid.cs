@@ -76,6 +76,8 @@ public class HexGrid : MonoBehaviour
             new Vector2(position.x, position.z);
         Label.text = cell.coordinates.ToStringOnSeparateLines();
 
+        cell.uiRect = Label.rectTransform;
+
     }
 
     void Start () {
