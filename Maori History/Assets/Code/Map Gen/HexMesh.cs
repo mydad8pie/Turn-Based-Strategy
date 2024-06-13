@@ -175,9 +175,27 @@ public class HexMesh : MonoBehaviour
 
       HexEdgeType leftEdgeType = bottomCell.GetEdgeType(leftCell);
       HexEdgeType rightEdgeType = bottomCell.GetEdgeType(rightCell);
-      
+
+      if (leftEdgeType == HexEdgeType.Slope){
+         if (rightEdgeType == HexEdgeType.Slope){
+            TriangulateCornerTerraces(bottom, bottomCell, left, leftCell, right, rightCell);
+            return;
+         }
+      }
+
       AddTriangle(bottom, left, right);
       AddTriangleColor(bottomCell.color, leftCell.color, rightCell.color);
+    }
+
+    void TriangulateCornerTerraces ( Vector3 begin, HexCell beginCell, Vector3 left, HexCell leftCell, Vector3 right, HexCell rightCell)
+    {
+      Vector3 v3 = HexMetrics.TerraceLerp(begin, left, 1);
+      Vector3 v4 = HexMetrics.TerraceLerp(begin, right, 1);
+      Color c3 = HexMetrics.TerraceLerp(beginCell.color, leftCell.color, 1);
+      Color c4 = HexMetrics.TerraceLerp(beginCell.color, rightCell.color, 1);
+
+      AddTriangle(begin, v3, v4);
+      AddTriangleColor(beginCell.color, c3, c4);
     }
 
   
