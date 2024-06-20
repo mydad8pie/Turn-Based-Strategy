@@ -1,17 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Camera_movment : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float zoomSpeed = 10f;
-    public float maxZoom = 40f;
-    public float minZoom = 2f;
+    [SerializeField]
+    private float moveSpeed = 10f;
+    [SerializeField]
+    private float zoomSpeed = 10f;
+    [SerializeField]
+    private float maxZoom = 40f;
+    [SerializeField]
+    private float minZoom = 2f;
+
+    private float isometricView = 40f;
+    private float topDownView = 60f;
+    private bool firstSpacePress = true;
     private bool isRotated = false;
     private bool isPaused = false;
+
+
 
 
     //void Start()
@@ -22,6 +34,11 @@ public class Camera_movment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        HandleRotationInput();
+        HandleZoomInput();
+        HandleMovementInput();
+        
         
         //if (Input.GetKeyDown(KeyCode.Escape))
         //{
@@ -29,44 +46,14 @@ public class Camera_movment : MonoBehaviour
         //}
 
         //if (isPaused) return;
-        
-        // Getting the arrow key input
+    }
+
+    void HandleMovementInput(){
         float verticalInput = GetVerticalInput();
         float horizontalInput = GetHorizontalInput();
 
         // apply movement
         MoveCamera(verticalInput, horizontalInput);
-
-        // Zooming
-        // Scroll Wheel zoom control
-        float scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
-        if (scrollWheelInput != 0f)
-        {
-            ZoomCamera(scrollWheelInput);
-        }
-        //zooming with keyboard X and Z
-        if (Input.GetKey(KeyCode.Z))
-        {
-            ZoomCamera(1f);
-
-        }
-        else if (Input.GetKey(KeyCode.X))
-        {
-            ZoomCamera(-1f);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            RotateCamera();
-        }
-
-        if (!isRotated && transform.position.y > 40f)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = 40f;
-            transform.position = newPosition;
-        }
-
     }
     void TogglePause()
     {
@@ -144,7 +131,7 @@ public class Camera_movment : MonoBehaviour
         if (!isRotated)
         {
             forward.y = 0;
-             forward.Normalize();
+            forward.Normalize();
         }
         else
         {
@@ -160,6 +147,33 @@ public class Camera_movment : MonoBehaviour
 
     }
 
+    void HandleZoomInput(){
+        float scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
+        if (scrollWheelInput != 0f)
+        {
+            ZoomCamera(scrollWheelInput);
+        }
+        //zooming with keyboard X and Z
+        if (Input.GetKey(KeyCode.Z))
+        {
+            ZoomCamera(1f);
+
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            ZoomCamera(-1f);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift)& Input.GetKey(KeyCode.UpArrow))
+        {
+            ZoomCamera(1f);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) & Input.GetKey(KeyCode.DownArrow))
+        {
+            ZoomCamera(-1f);
+        }
+    }
+
     void ZoomCamera(float zoomAmount)
     {
         // updates camera postion with zoom
@@ -171,21 +185,15 @@ public class Camera_movment : MonoBehaviour
             newPosition.z = transform.position.z;
           
         }
-
-        if(isRotated){
-            maxZoom = 60f;
-        }
-        else
-        {
-            maxZoom = 40f;
-        }
-        
-
         // move the camera
-        transform.position = newPosition;
+        transform.position = newPosition; 
+    }
 
-        
-        
+    void HandleRotationInput(){
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            RotateCamera();
+        }
     }
 
     public void RotateCamera()
@@ -193,14 +201,23 @@ public class Camera_movment : MonoBehaviour
         Vector3 currentRotation = transform.eulerAngles;
         if (!isRotated)
         {
+            isometricView = transform.position.y;
+            if (!firstSpacePress){
+                
+                transform.position = new Vector3(transform.position.x, topDownView, transform.position.z);
+            }
+            maxZoom = 60f; 
             currentRotation.x = 90f;
             isRotated = true;
+            firstSpacePress = false;
         }
         else
         {
+            topDownView = transform.position.y;
+            transform.position = new Vector3(transform.position.x, isometricView, transform.position.z);
+            maxZoom = 40f;
             currentRotation.x = 45f;
             isRotated = false;
-
             
         }
         transform.eulerAngles = currentRotation;
