@@ -1,10 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class Camera_movment : MonoBehaviour
 {
@@ -22,30 +16,13 @@ public class Camera_movment : MonoBehaviour
     private bool firstSpacePress = true;
     private bool isRotated = false;
     private bool isPaused = false;
-
-
-
-
-    //void Start()
-    //{
-    //    LockCursor();
-    //}
-
-    // Update is called once per frame
     void Update()
     {
 
         HandleRotationInput();
         HandleZoomInput();
         HandleMovementInput();
-        
-        
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-            //TogglePause();
-        //}
 
-        //if (isPaused) return;
     }
 
     void HandleMovementInput(){
@@ -55,33 +32,6 @@ public class Camera_movment : MonoBehaviour
         // apply movement
         MoveCamera(verticalInput, horizontalInput);
     }
-    void TogglePause()
-    {
-        isPaused = !isPaused;
-        if (isPaused)
-        {
-            UnlockCursor();
-            Time.timeScale = 0f;//pasue game
-        }
-        else
-        {
-            LockCursor();
-            Time.timeScale = 1f;//resume game
-        }
-    }
-    void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-    void UnlockCursor()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-
-    
-    //
     float GetVerticalInput()
     {
         // Checking for arrow key presses for vertical movement
@@ -222,6 +172,4 @@ public class Camera_movment : MonoBehaviour
         }
         transform.eulerAngles = currentRotation;
     }
-    
-
 }
