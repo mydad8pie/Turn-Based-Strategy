@@ -360,6 +360,7 @@
 "Assets/Code/Map Gen/HexMesh.cs"
 "Assets/Code/Map Gen/HexMetrics.cs"
 "Assets/Code/PauseManager.cs"
+"Assets/Code/SceneManager.cs"
 "Assets/Code/Turn/TurnManager.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

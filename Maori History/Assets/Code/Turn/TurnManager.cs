@@ -14,6 +14,9 @@ public class TurnManager : MonoBehaviour
     private bool playerHasCompletedTurn = false;
 
 
+
+
+
     void Start()
     {
         currentPlayerIndex = 0;
@@ -23,7 +26,7 @@ public class TurnManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Tab) && currentPlayerIndex == 0 && !playerHasCompletedTurn)
+        if (Input.GetKey(KeyCode.Tab) && currentPlayerIndex == 0 && !playerHasCompletedTurn && !PauseManager.Instance.IsPaused)
         {
             EndPlayerTurn();
         }

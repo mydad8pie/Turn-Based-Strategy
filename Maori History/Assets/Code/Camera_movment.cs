@@ -15,7 +15,6 @@ public class Camera_movment : MonoBehaviour
     private float topDownView = 60f;
     private bool firstSpacePress = true;
     private bool isRotated = false;
-    private bool isPaused = false;
     void Update()
     {
 
