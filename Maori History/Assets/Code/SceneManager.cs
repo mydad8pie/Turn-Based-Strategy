@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SceneManager : MonoBehaviour
 {
 
-    public static SceneManager Instance { get; private set; }
+    public static SceneManager Instance;
+
+    public Scene MainMenu;
 
 
     void Awake(){
@@ -29,7 +31,7 @@ public class SceneManager : MonoBehaviour
    }
 
    public void LoadMainMenu(){
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(MainMenu.name);
    }
 
    public void QuitGame(){
