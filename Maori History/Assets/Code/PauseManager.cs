@@ -82,9 +82,10 @@ public class PauseManager : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1f;
+        SceneManager.Instance.LoadMainMenu();
 
         Debug.Log("Quitting");  
 
-        //ScenceManager.LoadScene(0);
+        
     }
 }

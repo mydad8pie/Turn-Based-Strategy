@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public static SceneManager Instance { get; private set; }
+
+
+    void Awake(){
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+   public void LoadScene(string sceneName){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+   }
+
+   public void RestartCurrentScene(){
+        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
+   }
+
+   public void LoadMainMenu(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+   }
+
+   public void QuitGame(){
+        Application.Quit();
+   }
 }

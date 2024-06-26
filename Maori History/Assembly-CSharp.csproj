@@ -104,6 +104,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Code/Map Gen/HexMetrics.cs" />
     <Compile Include="Assets/Code/Map Gen/HexCell.cs" />
+    <Compile Include="Assets/Code/NewBehaviourScript.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Code/Map Gen/HexMapEditor.cs" />
     <Compile Include="Assets/Code/Map Gen/HexMesh.cs" />
