@@ -13,6 +13,8 @@ public class PauseManager : MonoBehaviour
     public Button restartButton;
     public Button quitButton;
 
+    public Button settingsButton;
+
     private bool isPaused = false;
 
     public bool IsPaused
@@ -39,6 +41,7 @@ public class PauseManager : MonoBehaviour
         resumeButton.onClick.AddListener(Resume);
         restartButton.onClick.AddListener(Restart);
         quitButton.onClick.AddListener(Quit);
+        settingsButton.onClick.AddListener(Pause);
         
     }
 
@@ -50,6 +53,7 @@ public class PauseManager : MonoBehaviour
             if (isPaused)
             {
                 Resume();
+                
             }
             else
             {
@@ -62,6 +66,7 @@ public class PauseManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        settingsButton.onClick.AddListener(Pause);
     }
 
     void Pause()
@@ -69,6 +74,7 @@ public class PauseManager : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        settingsButton.onClick.AddListener(Resume);
     }
 
     public void Restart()

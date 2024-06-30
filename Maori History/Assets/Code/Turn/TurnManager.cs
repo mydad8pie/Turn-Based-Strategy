@@ -4,6 +4,8 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
 
+    public static TurnManager Instance { get; private set; }
+
     // a public varable to store the number of players
     public int numberOfPlayers = 2;
 
@@ -12,6 +14,20 @@ public class TurnManager : MonoBehaviour
 
     // a public variable to indicate if the player has completed their turn
     private bool playerHasCompletedTurn = false;
+
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
 

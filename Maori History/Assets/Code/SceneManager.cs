@@ -6,10 +6,7 @@ public class SceneManager : MonoBehaviour
 {
 
     public static SceneManager Instance;
-
-    public Scene MainMenu;
-
-
+    
     void Awake(){
         if (Instance == null)
         {
@@ -31,7 +28,7 @@ public class SceneManager : MonoBehaviour
    }
 
    public void LoadMainMenu(){
-        UnityEngine.SceneManagement.SceneManager.LoadScene(MainMenu.name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
    }
 
    public void QuitGame(){

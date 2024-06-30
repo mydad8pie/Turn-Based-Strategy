@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 422358018}
   - component: {fileID: 422358017}
   m_Layer: 0
-  m_Name: Turns
+  m_Name: TurnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,6 +1351,7 @@ MonoBehaviour:
   resumeButton: {fileID: 52252928}
   restartButton: {fileID: 647069877}
   quitButton: {fileID: 1237049854}
+  settingsButton: {fileID: 1947248029}
 --- !u!4 &559279560
 Transform:
   m_ObjectHideFlags: 0
@@ -2208,7 +2209,7 @@ GameObject:
   - component: {fileID: 891438395}
   - component: {fileID: 891438394}
   m_Layer: 0
-  m_Name: Testing
+  m_Name: GameSceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4479,9 +4480,9 @@ SceneRoots:
   - {fileID: 1321153491}
   - {fileID: 1641876716}
   - {fileID: 1607320242}
-  - {fileID: 422358018}
   - {fileID: 867565051}
   - {fileID: 1752466301}
   - {fileID: 913986893}
+  - {fileID: 422358018}
   - {fileID: 559279560}
   - {fileID: 891438395}
