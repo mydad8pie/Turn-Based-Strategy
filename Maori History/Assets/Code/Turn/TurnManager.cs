@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
 
     public static TurnManager Instance { get; private set; }
+
+
+    public Button NextTurnButton;
 
     // a public varable to store the number of players
     public int numberOfPlayers = 2;
@@ -30,14 +34,12 @@ public class TurnManager : MonoBehaviour
     }
 
 
-
-
-
     void Start()
     {
         currentPlayerIndex = 0;
         //start the turn routine to manage the turns
         StartCoroutine(TurnRoutine());
+        NextTurnButton.onClick.AddListener(EndPlayerTurn);
     }
 
     void Update()
@@ -95,14 +97,26 @@ public class TurnManager : MonoBehaviour
     void ExecuteComputerActions(int playerIndex){
 
         Debug.Log("Computer " + playerIndex + " Has completed their turn");
+        Debug.ClearDeveloperConsole();
     }
 
     // a function to end the player turn
     public void EndPlayerTurn()
     {
 
-        Debug.Log("Player " + currentPlayerIndex + " turn has ended");
-        playerHasCompletedTurn = true;
+        if (currentPlayerIndex == 0 && !PauseManager.Instance.IsPaused){
+            Debug.Log("Player " + currentPlayerIndex + " turn has ended");
+            playerHasCompletedTurn = true;
+        }
+        else if(PauseManager.Instance.IsPaused){
+            Debug.Log("Game is paused");
+        }
+        else{
+            Debug.Log("It is not your turn");
+        }
+            
+
+        
     }
 
 
