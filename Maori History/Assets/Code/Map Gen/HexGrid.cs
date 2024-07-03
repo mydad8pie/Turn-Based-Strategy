@@ -23,7 +23,15 @@ public class HexGrid : MonoBehaviour
 
     HexMesh hexMesh;
 
+    public Texture2D noiseSource;
+
+    void OnEnable(){
+        HexMetrics.noiseSource = noiseSource;
+    }
+
     void Awake() {
+
+        
 
         cells = new HexCell[height * width];
         gridCanvas = GetComponentInChildren<Canvas>();
@@ -77,6 +85,7 @@ public class HexGrid : MonoBehaviour
         Label.text = cell.coordinates.ToStringOnSeparateLines();
 
         cell.uiRect = Label.rectTransform;
+        cell.Elevation = 0;
 
     }
 

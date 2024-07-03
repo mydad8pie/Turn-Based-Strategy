@@ -18,6 +18,18 @@ public static class HexMetrics {
 
 	public const float verticalTerraceStepSize = 1f / (terracesPerSlope + 1);
 
+	public static Texture2D noiseSource;
+
+	public const float cellPerturbStrength = 5f;
+
+	public const float noiseScale = 0.003f;
+
+	public const float elevationPerturbStrength = 1.5f;
+
+	public static Vector4 SampleNoise (Vector3 position){
+		return noiseSource.GetPixelBilinear(position.x * noiseScale, position.z * noiseScale);
+	}
+
 	public static Vector3 TerraceLerp (Vector3 a, Vector3 b, int step){
 		float h = step * HexMetrics.horizontalTerraceStepSize;
 		a.x += (b.x - a.x) * h;
