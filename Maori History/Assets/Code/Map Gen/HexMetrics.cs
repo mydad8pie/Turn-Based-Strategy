@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
 public static class HexMetrics {
-	public const float solidFactor = 0.75f;
+	public const float solidFactor = 0.8f;
 	public const float blendFactor = 1f - solidFactor;
 
 	public const float outerRadius = 10f;
 
 	public const float innerRadius = outerRadius * 0.866025404f;
 
-	public const float elevationStep = 5f;
+	public const float elevationStep = 3f;
 
 	public const int terracesPerSlope = 2;
 	
@@ -20,7 +20,7 @@ public static class HexMetrics {
 
 	public static Texture2D noiseSource;
 
-	public const float cellPerturbStrength = 5f;
+	public const float cellPerturbStrength = 4f;
 
 	public const float noiseScale = 0.003f;
 
