@@ -23,13 +23,10 @@ public class HexGrid : MonoBehaviour
 
     public Text cellLabelPrefab;
 
-    Canvas gridCanvas;
-
-    HexMesh hexMesh;
+    public HexGridChunk chunkPrefab;
 
     public Texture2D noiseSource;
 
-    public HexGridChunk chunkPrefab;
 
     HexGridChunk[] chunks;
 
@@ -41,9 +38,6 @@ public class HexGrid : MonoBehaviour
 
         HexMetrics.noiseSource = noiseSource;
 
-        
-        gridCanvas = GetComponentInChildren<Canvas>();
-        hexMesh = GetComponentInChildren<HexMesh>();
 
 
         cellCountX = chunkCountX * HexMetrics.chunkSizeX;
@@ -139,11 +133,6 @@ public class HexGrid : MonoBehaviour
         chunk.AddCell(localX + localZ * HexMetrics.chunkSizeX, cell);
     }
 
-    void Start () {
-        hexMesh.Triangulate(cells);
-        
-    }
-
  
     public HexCell GetCell (Vector3 position){
         position = transform.InverseTransformPoint(position);
@@ -152,11 +141,6 @@ public class HexGrid : MonoBehaviour
         return cells[index];
     }
 
-    public void Refresh()
-    {
-        hexMesh.Triangulate(cells);
-           
-    }
 
     
 }
