@@ -12,6 +12,8 @@ public class HexCell : MonoBehaviour
 
     public RectTransform uiRect;
 
+    public HexGridChunk chunk;
+
     int elevation;
 
     public int Elevation
