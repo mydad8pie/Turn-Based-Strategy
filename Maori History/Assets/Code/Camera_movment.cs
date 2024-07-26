@@ -3,16 +3,16 @@ using UnityEngine;
 public class Camera_movment : MonoBehaviour
 {
     [SerializeField]
-    private float moveSpeed = 10f;
+    private float moveSpeed = 30f;
     [SerializeField]
-    private float zoomSpeed = 10f;
+    private float zoomSpeed = 20f;
     [SerializeField]
-    private float maxZoom = 40f;
+    private float maxZoom = 80f;
     [SerializeField]
     private float minZoom = 2f;
 
-    private float isometricView = 40f;
-    private float topDownView = 60f;
+    private float isometricView = 80f;
+    private float topDownView = 100f;
     private bool firstSpacePress = true;
     private bool isRotated = false;
 
@@ -157,7 +157,7 @@ public class Camera_movment : MonoBehaviour
                 
                 transform.position = new Vector3(transform.position.x, topDownView, transform.position.z);
             }
-            maxZoom = 60f; 
+            maxZoom = 100f; 
             currentRotation.x = 90f;
             isRotated = true;
             firstSpacePress = false;
@@ -166,7 +166,7 @@ public class Camera_movment : MonoBehaviour
         {
             topDownView = transform.position.y;
             transform.position = new Vector3(transform.position.x, isometricView, transform.position.z);
-            maxZoom = 40f;
+            maxZoom = 80f;
             currentRotation.x = 45f;
             isRotated = false;
             
