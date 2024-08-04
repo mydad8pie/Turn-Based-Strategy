@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7706ec6d8fa18402b8cff0120012332d, type: 3}
+  m_Name: ChunkPreset8
+  m_EditorClassIdentifier: 
+  cells:
+  - coordinates:
+      x: 13
+      z: 5
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 14
+      z: 5
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 15
+      z: 5
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 16
+      z: 5
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 17
+      z: 5
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 12
+      z: 6
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 13
+      z: 6
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 14
+      z: 6
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 15
+      z: 6
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 16
+      z: 6
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 12
+      z: 7
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 13
+      z: 7
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 14
+      z: 7
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 15
+      z: 7
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 16
+      z: 7
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 11
+      z: 8
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 12
+      z: 8
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 13
+      z: 8
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 14
+      z: 8
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 15
+      z: 8
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 11
+      z: 9
+    color: {r: 1, g: 0.7728097, b: 0, a: 0}
+    elevation: 1
+  - coordinates:
+      x: 12
+      z: 9
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 13
+      z: 9
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 14
+      z: 9
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0
+  - coordinates:
+      x: 15
+      z: 9
+    color: {r: 0, g: 0.16476655, b: 1, a: 0}
+    elevation: 0

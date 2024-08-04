@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Code/Map Gen/Editor/HexCoordinatesDrawer.cs" />
+    <Compile Include="Assets/Code/Map Gen/Editor/HexGridEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

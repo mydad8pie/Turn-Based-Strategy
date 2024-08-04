@@ -21,7 +21,10 @@ public class HexMapEditor : MonoBehaviour
         if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject() &&  !PauseManager.Instance.IsPaused){
             HandleInput();
         }
-    }
+       // if (Input.GetMouseButton(0) && Input.GetKeyDown("u") && !EventSystem.current.IsPointerOverGameObject() &&  !PauseManager.Instance.IsPaused){
+         //   hexGrid.Buidling = new Vector3(0, 0, 0);
+       // }
+    }//
 
     void HandleInput(){
 

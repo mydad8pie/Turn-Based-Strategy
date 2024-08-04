@@ -61,6 +61,25 @@ public class PauseManager : MonoBehaviour
             }
         }
     }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        
+        if (scene.name == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -86,8 +105,9 @@ public class PauseManager : MonoBehaviour
 
     public void Quit()
     {
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.Instance.LoadMainMenu();
+        GameSceneManager.Instance.LoadMainMenu();
 
         
     }

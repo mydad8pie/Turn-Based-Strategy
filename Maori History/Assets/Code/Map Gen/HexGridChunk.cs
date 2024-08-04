@@ -23,6 +23,18 @@ public class HexGridChunk : MonoBehaviour
         cell.transform.SetParent(transform, false);
         cell.uiRect.SetParent(gridCanvas.transform, false);    
     }
+
+  public HexCell GetCell(HexCoordinates coordinates)
+    {
+    int index = coordinates.X + coordinates.Z * HexMetrics.chunkSizeX + coordinates.Z / 2;
+    if (index >= 0 && index < cells.Length)
+    {
+        return cells[index];
+    }
+    return null;
+    
+    }
+
     
     public void Refresh(){
         enabled = true;

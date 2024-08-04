@@ -21,4 +21,6 @@ public static class HexDirectionExtensions
   {
     return direction == HexDirection.NW ? HexDirection.NE : (direction + 1);
   }
+
+  
 }
