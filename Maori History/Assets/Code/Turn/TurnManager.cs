@@ -14,10 +14,10 @@ public class TurnManager : MonoBehaviour
     public int numberOfPlayers = 2;
 
     // a public variable to store the current player index
-    private int currentPlayerIndex = 0;
+    public int currentPlayerIndex = 0;
 
     // a public variable to indicate if the player has completed their turn
-    private bool playerHasCompletedTurn = false;
+    public bool playerHasCompletedTurn = false;
 
 
     void Awake()
@@ -97,7 +97,7 @@ public class TurnManager : MonoBehaviour
     void ExecuteComputerActions(int playerIndex){
 
         Debug.Log("Computer " + playerIndex + " Has completed their turn");
-        Debug.ClearDeveloperConsole();
+        
     }
 
     // a function to end the player turn
