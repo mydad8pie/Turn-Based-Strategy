@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ae1ff05a4f749328a73a7a1c86b0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  highlightMaterial: {fileID: 2100000, guid: 0fe11248e61e2447bbb858e382787464, type: 2}
   coordinates:
     x: 0
     z: 0
   uiRect: {fileID: 0}
   chunk: {fileID: 0}
-  color: {r: 0, g: 0, b: 0, a: 0}
   neighbors:
   - {fileID: 0}
   - {fileID: 0}

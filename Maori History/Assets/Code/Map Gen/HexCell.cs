@@ -6,7 +6,12 @@ using UnityEngine;
 
 public class HexCell : MonoBehaviour
 {
+    public Material defaultMaterial;
+    public Material highlightMaterial;
+
+    private Renderer cellRenderer;
     public HexCoordinates coordinates;
+
 
 
     public RectTransform uiRect;
@@ -31,6 +36,14 @@ public class HexCell : MonoBehaviour
         }
         
     }
+   // void Start(){
+   //     cellRenderer = GetComponentInChildren<Renderer>();
+   //     cellRenderer.material.color = defaultMaterial.color;
+   // }
+//
+//   // public void Highlight(bool highlight){
+    //    cellRenderer.material = highlight ? highlightMaterial : defaultMaterial;
+    //}
     
 
     public int Elevation

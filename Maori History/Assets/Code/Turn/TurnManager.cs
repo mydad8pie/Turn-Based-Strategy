@@ -1,24 +1,32 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using Unity.VisualScripting;
+using TMPro;
 
 public class TurnManager : MonoBehaviour
 {
-
     public static TurnManager Instance { get; private set; }
-
 
     public Button NextTurnButton;
 
-    // a public varable to store the number of players
-    public int numberOfPlayers = 2;
+    public TMP_Text turnText;
 
-    // a public variable to store the current player index
+    // Number of players
+    public int numberOfRealPlayers = 0; // number of extra players
+
+    public int numberOfComputerPlayers = 1;
+
+    private int totalPlayers;
+
+    // Current player index
     public int currentPlayerIndex = 0;
 
-    // a public variable to indicate if the player has completed their turn
+    // Indicates if the player has completed their turn
     public bool playerHasCompletedTurn = false;
 
+    public int turnCounter = 1; // starts at one since game starts on turn one
 
     void Awake()
     {
@@ -33,13 +41,15 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-
     void Start()
     {
+        totalPlayers = numberOfRealPlayers + numberOfComputerPlayers;
         currentPlayerIndex = 0;
-        //start the turn routine to manage the turns
+        // Start the turn routine to manage the turns
         StartCoroutine(TurnRoutine());
         NextTurnButton.onClick.AddListener(EndPlayerTurn);
+
+        UpdateTurnText();
     }
 
     void Update()
@@ -52,72 +62,94 @@ public class TurnManager : MonoBehaviour
 
     IEnumerator TurnRoutine()
     {
-        while (true) // loop forever to keep the game running
+        while (true) // Loop forever to keep the game running
         {
-            if(currentPlayerIndex == 0)// check if the current player is a human player
+            UpdateTurnText();
+
+            if (currentPlayerIndex < numberOfRealPlayers) // Check if the current player is a human player
             {
+                
                 // Start the player turn
                 StartPlayerTurn(currentPlayerIndex);
 
                 // Wait until the player has completed their turn
                 yield return new WaitUntil(() => playerHasCompletedTurn);
-                // rest the flag for the nex turn
+                // Reset the flag for the next turn
                 playerHasCompletedTurn = false;
+                
             }
             else
             {
-                // Start the computer turn
-                StartComputerTurn(currentPlayerIndex);
+                int computerPlayerIndex = currentPlayerIndex - numberOfRealPlayers + 1;
+                
+                StartComputerTurn(computerPlayerIndex);
 
-                // Simulate time for comuter turn
-                yield return new WaitForSeconds(6f);
+                // Simulate time for computer turn
+                yield return new WaitForSeconds(1f);
             }
 
-            // move to the next player
-            currentPlayerIndex = (currentPlayerIndex + 1) % numberOfPlayers;
-        }
+            // Move to the next player
+            currentPlayerIndex = (currentPlayerIndex + 1) % totalPlayers;
 
+            if (currentPlayerIndex == 0)
+            {
+                turnCounter++;
+            }
+
+            yield return null;
+        }
     }
 
-    // a function to start the player turn
+    void UpdateTurnText()
+    {
+        turnText.text = "Turn " + turnCounter;
+    }
+
+    // Function to start the player turn
     void StartPlayerTurn(int playerIndex)
     {
-        Debug.Log("Player " + playerIndex + " turn has started");
-    }
+        Debug.Log("Starting turn "+ turnCounter + " for player " + currentPlayerIndex);
 
-    // a function to start the computer turn
-    void StartComputerTurn(int playerIndex)
-    {
-        Debug.Log("Computer " + playerIndex + " turn has started");
+        UnitMovement[] playerUnits = FindObjectsOfType<UnitMovement>();
 
-        ExecuteComputerActions(playerIndex);
-    }
-
-    // a function to execute the computer actions
-    void ExecuteComputerActions(int playerIndex){
-
-        Debug.Log("Computer " + playerIndex + " Has completed their turn");
+        foreach(UnitMovement unit in playerUnits){
+            if (unit.IsPlayerControlled())
+            {
+                unit.ResetMoveRange();
+            }
+        }
         
     }
 
-    // a function to end the player turn
+    // Function to start the computer turn
+    void StartComputerTurn(int computerPlayerIndex)
+    {
+        Debug.Log("Starting turn " + turnCounter + " for computer" + computerPlayerIndex);
+        ExecuteComputerActions(computerPlayerIndex);
+    }
+
+    // Function to execute the computer actions
+    void ExecuteComputerActions(int computerPlayerIndex)
+    {
+        new WaitForSeconds(6f);
+        Debug.Log("Computer " + computerPlayerIndex + " has completed turn "+ turnCounter);
+    }
+
+    // Function to end the player turn
     public void EndPlayerTurn()
     {
-
-        if (currentPlayerIndex == 0 && !PauseManager.Instance.IsPaused){
-            Debug.Log("Player " + currentPlayerIndex + " turn has ended");
+        if (currentPlayerIndex ==0 && !PauseManager.Instance.IsPaused)
+        {
+            Debug.Log("Player " + currentPlayerIndex + " turn " + turnCounter + " has ended");
             playerHasCompletedTurn = true;
         }
-        else if(PauseManager.Instance.IsPaused){
+        else if (PauseManager.Instance.IsPaused)
+        {
             Debug.Log("Game is paused");
         }
-        else{
+        else
+        {
             Debug.Log("It is not your turn");
         }
-            
-
-        
     }
-
-
 }

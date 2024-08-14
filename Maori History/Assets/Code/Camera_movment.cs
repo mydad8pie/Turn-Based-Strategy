@@ -16,6 +16,10 @@ public class Camera_movment : MonoBehaviour
     private bool firstSpacePress = true;
     private bool isRotated = false;
 
+    void Start(){
+        
+    }
+
 
     void Update()
     {

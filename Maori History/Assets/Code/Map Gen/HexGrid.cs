@@ -5,7 +5,8 @@ using System;
 using System.Xml.Serialization;
 using UnityEditor;
 using System.Diagnostics;
-using System.IO; // For AssetDatabase (Editor-only code)
+using System.IO;
+using Unity.VisualScripting; // For AssetDatabase (Editor-only code)
 
 public class HexGrid : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class HexGrid : MonoBehaviour
 
     // Add these as class-level variables
     int cellCountX, cellCountZ;
+
+    private Dictionary<HexCell, IUnit> unitsOnCells = new Dictionary<HexCell, IUnit>();
 
     public HexCell[] GetAllCells()
     {
@@ -250,6 +253,39 @@ public class HexGrid : MonoBehaviour
         {
             ApplyGridPreset(preset);
         }
+    }
+
+    public void RegisterUnit(HexCell cell, IUnit unit){
+        if(unitsOnCells.ContainsKey(cell)){
+            UnityEngine.Debug.LogWarning("Cell already has a unit");
+            return;
+        }
+
+        unitsOnCells[cell] = unit;
+        unit.CurrentCell = cell;
+    }
+
+    public void UnregisterUnit(HexCell cell){
+        if(unitsOnCells.ContainsKey(cell)){
+            unitsOnCells[cell].CurrentCell = null;
+            unitsOnCells.Remove(cell);
+        }
+    }
+    public bool IsCellOccupied(HexCell cell){
+        return unitsOnCells.ContainsKey(cell);
+    }
+
+    public IUnit GetUnitAtCell(HexCell cell){
+        unitsOnCells.TryGetValue(cell, out var unit);
+        return unit;
+    }
+
+    public int GetDistance(HexCell a, HexCell b){
+        int dx = Mathf.Abs(a.coordinates.X - b.coordinates.X);
+        int dy = Mathf.Abs(a.coordinates.Y - b.coordinates.Y);
+        int dz = Mathf.Abs(a.coordinates.Z - b.coordinates.Z);
+
+        return Mathf.Max(dx, dy, dz);
     }
     
 }
