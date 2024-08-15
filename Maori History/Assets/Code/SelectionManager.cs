@@ -20,6 +20,8 @@ public class SelectionManager : MonoBehaviour
     public Button trainWarriorButton;
     public Button trainSettlerButton;
 
+    public Button placeVillageButton;
+
     void Start(){
         builderUI.SetActive(false);
         warriorUI.SetActive(false);
@@ -55,6 +57,10 @@ public class SelectionManager : MonoBehaviour
         {
             PlaceVillage();
         }
+
+        if (TurnManager.Instance.unitTrainingStartTurn != -1){
+            TrainBuilder();
+        }
        
     }
 
@@ -88,6 +94,7 @@ public class SelectionManager : MonoBehaviour
                 }
                 else if(selectedUnit.gameObject.name == "Settler(Clone)"){
                     settlerUI.SetActive(true);
+                    placeVillageButton.onClick.AddListener(PlaceVillage);
                     
                 }
             }
@@ -166,7 +173,20 @@ public class SelectionManager : MonoBehaviour
 
     public void TrainBuilder(){
         if (selectedVillage != null){
-            Debug.Log("Training builder");
+            if(TurnManager.Instance.unitTrainingStartTurn == -1){
+                TurnManager.Instance.unitTrainingStartTurn = TurnManager.Instance.turnCounter;
+                Debug.Log("Training builder on turn: " + TurnManager.Instance.turnCounter);
+
+            }
+            else if(TurnManager.Instance.turnCounter > TurnManager.Instance.unitTrainingStartTurn + 2){
+                Debug.Log("Builder trained");
+                TurnManager.Instance.unitTrainingStartTurn = -1;
+            }
+
+            else{
+                Debug.Log("Training builder in progress " + (TurnManager.Instance.turnCounter - TurnManager.Instance.unitTrainingStartTurn) + " turns passed");
+            }
+            
         }
     }
 

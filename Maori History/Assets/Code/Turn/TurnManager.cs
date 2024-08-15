@@ -28,6 +28,9 @@ public class TurnManager : MonoBehaviour
 
     public int turnCounter = 1; // starts at one since game starts on turn one
 
+
+    public int unitTrainingStartTurn = -1;
+
     void Awake()
     {
         if (Instance == null)

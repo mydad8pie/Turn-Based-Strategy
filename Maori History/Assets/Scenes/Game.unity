@@ -1257,6 +1257,7 @@ MonoBehaviour:
   currentPlayerIndex: 0
   playerHasCompletedTurn: 0
   turnCounter: 1
+  unitTrainingStartTurn: -1
 --- !u!4 &422358018
 Transform:
   m_ObjectHideFlags: 0
@@ -1429,8 +1430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Action
-
+  m_text: 'PlaceVillage
 
     (m)'
   m_isRightToLeft: 0
@@ -1547,6 +1547,7 @@ MonoBehaviour:
   trainBuilderButton: {fileID: 1083892873}
   trainWarriorButton: {fileID: 1286614603}
   trainSettlerButton: {fileID: 574723421}
+  placeVillageButton: {fileID: 1116702849}
 --- !u!4 &521146334
 Transform:
   m_ObjectHideFlags: 0
@@ -3952,7 +3953,7 @@ GameObject:
   - component: {fileID: 1116702850}
   - component: {fileID: 1116702849}
   m_Layer: 5
-  m_Name: Action
+  m_Name: Place Village
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5633,6 +5634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexGrid: {fileID: 904061058}
   maxMoveRange: 3
+  currentMoveRange: 0
 --- !u!4 &1590202299
 Transform:
   m_ObjectHideFlags: 0
