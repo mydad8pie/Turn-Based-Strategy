@@ -5,7 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public HexGrid hexGrid;
     public string presetPath = "Assets/Chunks/ChunkPreset1.asset";
-    public GameObject settlerPrefab; // Reference to the builder prefab
+    public GameObject settlerPrefab; // Reference to the settler prefab
+    public GameObject AnimalPrefab; // Reference to the animal prefab
     public Camera MainCamera; // Reference to the main camera
 
     void Start()
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             hexGrid.LoadPreset(presetPath);
             SpawnSettler();
+            SpawnAnimalsOnGreenCells(10); // Spawning 10 animals on green cells
         }
         else
         {
@@ -25,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         if (settlerPrefab == null)
         {
-            Debug.LogError("Builder prefab is not assigned.");
+            Debug.LogError("Settler prefab is not assigned.");
             return;
         }
 
@@ -36,7 +38,6 @@ public class GameManager : MonoBehaviour
             Vector3 spawnPosition = randomYellowCell.Position + new Vector3(0, 3f, 0);
             GameObject settler = Instantiate(settlerPrefab, spawnPosition, Quaternion.identity);
 
-            // Optionally set up the builder
             SettlerMovement settlerMovement = settler.GetComponent<SettlerMovement>();
             if (settlerMovement != null)
             {
@@ -44,12 +45,11 @@ public class GameManager : MonoBehaviour
                 settlerMovement.CurrentCell = randomYellowCell;
             }
 
-            // Focus the camera on the builder
             FocusCameraOnSettler(settler);
         }
         else
         {
-            Debug.LogWarning("No yellow cells found for spawning the builder.");
+            Debug.LogWarning("No yellow cells found for spawning the settler.");
         }
     }
 
@@ -66,6 +66,30 @@ public class GameManager : MonoBehaviour
         MainCamera.transform.position = cameraPosition;
     }
 
+    void SpawnAnimalsOnGreenCells(int numberOfAnimals)
+    {
+        if (AnimalPrefab == null)
+        {
+            Debug.LogError("Animal prefab is not assigned.");
+            return;
+        }
+
+        List<HexCell> greenCells = FindGreenCells();
+        if (greenCells.Count > 0)
+        {
+            for (int i = 0; i < numberOfAnimals; i++)
+            {
+                HexCell randomGreenCell = greenCells[Random.Range(0, greenCells.Count)];
+                Vector3 spawnPosition = randomGreenCell.Position + new Vector3(0, 1f, 0);
+                Instantiate(AnimalPrefab, spawnPosition, Quaternion.identity);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No green cells found for spawning animals.");
+        }
+    }
+
     List<HexCell> FindYellowCells()
     {
         List<HexCell> yellowCells = new List<HexCell>();
@@ -79,6 +103,21 @@ public class GameManager : MonoBehaviour
             }
         }
         return yellowCells;
+    }
+
+    List<HexCell> FindGreenCells()
+    {
+        List<HexCell> greenCells = new List<HexCell>();
+        Color greenColor = new Color(0f, 0.47f, 0.02f); // 007804 in RGB
+
+        foreach (HexCell cell in hexGrid.GetAllCells())
+        {
+            if (IsColorMatch(cell.Color, greenColor))
+            {
+                greenCells.Add(cell);
+            }
+        }
+        return greenCells;
     }
 
     private bool IsColorMatch(Color a, Color b, float tolerance = 0.01f)

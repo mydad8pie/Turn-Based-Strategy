@@ -4734,8 +4734,8 @@ MonoBehaviour:
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   touchedColor: {r: 1, g: 0, b: 1, a: 1}
   Building: {fileID: 0}
-  chunkCountX: 4
-  chunkCountZ: 3
+  chunkCountX: 8
+  chunkCountZ: 5
   cellPrefab: {fileID: 1986031428601398128, guid: e04694fc463c84869b95806e81505b44, type: 3}
   cells: []
   cellLabelPrefab: {fileID: 4093867911798311311, guid: bd8a0e441d6184d0884f0fd797f8760b, type: 3}

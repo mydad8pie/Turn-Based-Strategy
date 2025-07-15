@@ -13,7 +13,6 @@ public class MouseManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            PlaceWarrior();
         }
     }
 
