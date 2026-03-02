@@ -79,6 +79,13 @@ public class SelectionManager : MonoBehaviour
 
             if (unitMovement != null)
             {
+
+                // only allows Selecting player owned units
+                if (unitMovement.ownerIndex != 0)
+                {
+                    Debug.Log("Cannot Select enemy unit");
+                    return;
+                }
                 selectedUnit = unitMovement;
                 Debug.Log("Selected unit: " + selectedUnit.gameObject.name);
                 Debug.Log("Selected unit max move range: " + selectedUnit.maxMoveRange);
@@ -119,6 +126,14 @@ public class SelectionManager : MonoBehaviour
 
             if (selectedObject.name.Contains("Village"))
             {
+                Village village = selectedObject.GetComponent<Village>();
+                if (village != null && village.ownerIndex!=0)
+                {
+                    Debug.Log("Cannot select enemy village");
+                    DeselectVillage();
+                    return;
+                }
+
                 selectedVillage = selectedObject;
                 Debug.Log("Selected village: " + selectedVillage.gameObject.name);
                 villageUI.SetActive(true);
@@ -181,6 +196,7 @@ public class SelectionManager : MonoBehaviour
             {
                 VillageComponent.hexGrid = hexGrid;
                 VillageComponent.CurrentCell = selectedUnit.CurrentCell;
+                VillageComponent.ownerIndex = 0; // Player owned
             }
 
             Destroy(selectedUnit.gameObject);

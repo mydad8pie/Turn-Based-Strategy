@@ -2,16 +2,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UnitMovement : MonoBehaviour, IUnit
+public interface IUnitMovement
+{
+    GameObject GameObject { get; }
+    HexCell CurrentCell { get; set; }
+
+    void ClearReachableCells();
+    void HighlightReachableCells();
+    global::System.Boolean IsPlayerControlled();
+    global::System.Boolean IsPlayerTurn();
+    global::System.Boolean IsReachable(HexCell cell);
+    void MoveTo(HexCell targetCell);
+    void MoveTowardCell(HexCell targetCell);
+    List<HexCell> ReachableCells();
+    void ResetCellColor(HexCell cell);
+    void ResetMoveRange();
+}
+
+public class UnitMovement : MonoBehaviour, IUnit, IUnitMovement
 {
     public GameObject GameObject => gameObject;
     public HexCell CurrentCell { get; set; }
     public HexGrid hexGrid;
     public int maxMoveRange; // Set by derived classes
 
+    public int ownerIndex = 0; // 0 = player, 1 = computer
+
 
     public int currentMoveRange;
     private List<HexCell> reachableCells = new List<HexCell>();
+    public List<HexCell> ReachableCells()
+    {
+        return reachableCells;
+    }
     private Dictionary<HexCell, Color> originalColors = new Dictionary<HexCell, Color>();
 
     protected virtual void Start()
@@ -26,7 +49,7 @@ public class UnitMovement : MonoBehaviour, IUnit
         CurrentCell = hexGrid.GetCell(transform.position);
         if (CurrentCell == null)
         {
-          //  Debug.LogError("Failed to get cell from HexGrid.");
+            //  Debug.LogError("Failed to get cell from HexGrid.");
             return;
         }
 
@@ -50,6 +73,20 @@ public class UnitMovement : MonoBehaviour, IUnit
 
             if (currentMoveRange >= distance)
             {
+                //check if there is an enemy uniit on the target cell
+                IUnit occupant = hexGrid.GetUnitAtCell(targetCell);
+                if (occupant != null)
+                {
+                    UnitMovement occupantMovement = occupant.GameObject.GetComponent<UnitMovement>();
+                    if (occupantMovement != null && occupantMovement.ownerIndex != ownerIndex)
+                    {
+                        // Attack instead of moveing
+                        currentMoveRange -= distance;
+                        CombatManager.Instance.TryAttack(this, occupantMovement);
+                        ClearReachableCells();
+                        return;
+                    }
+                }
                 currentMoveRange -= distance;
 
                 // Unregister from old cell
@@ -107,15 +144,31 @@ public class UnitMovement : MonoBehaviour, IUnit
                 {
                     HexCell neighbor = current.GetNeighbor(direction);
                     if (neighbor != null && !visited.Contains(neighbor))
-                    { 
+                    {
                         // skip blue (water) cells
-                        if(IsColorMatch(neighbor.Color, new Color(0f, 0.16f, 1f)))
+                        if (IsColorMatch(neighbor.Color, new Color(0f, 0.16f, 1f)))
                         {
-                        continue; // skips blue cells
+                            continue; // skips blue cells
                         }
-                        // Skip cells that already have a unit on them
-                        if(hexGrid.IsCellOccupied(neighbor))
+                        // Skip cells that already have a unit on them or has a emey unit
+                        if (hexGrid.IsCellOccupied(neighbor))
                         {
+                            IUnit occupant = hexGrid.GetUnitAtCell(neighbor);
+                            UnitMovement occupantMovement = occupant.GameObject.GetComponent<UnitMovement>();
+
+                            //if it is an enemy show it as reachable (so player can attack)
+                            // if it friendly, skip it
+                            if (occupantMovement != null && occupantMovement.ownerIndex != ownerIndex)
+                            {
+                                reachableCells.Add(neighbor);
+
+                                if (!originalColors.ContainsKey(neighbor))
+                                {
+                                    originalColors[neighbor] = neighbor.Color;
+                                }
+
+                            }
+
                             continue;
                         }
 
@@ -163,14 +216,25 @@ public class UnitMovement : MonoBehaviour, IUnit
 
     public bool IsPlayerTurn()
     {
-        return TurnManager.Instance.currentPlayerIndex == 0 && !TurnManager.Instance.playerHasCompletedTurn && !PauseManager.Instance.IsPaused;
+        if (ownerIndex == 0)
+        {
+            return TurnManager.Instance.currentPlayerIndex == 0 && !TurnManager.Instance.playerHasCompletedTurn && !PauseManager.Instance.IsPaused;
+        }
+        else
+        {
+            return TurnManager.Instance.currentPlayerIndex == ownerIndex;
+
+        }
+
+
+
     }
 
     public bool IsPlayerControlled()
     {
-    // Add logic to determine if this unit belongs to the current player
-    // For example, based on player index or some player ID
-    return TurnManager.Instance.currentPlayerIndex == 0;
+
+        return ownerIndex == 0;
+
     }
 
     List<HexCell> FindBlueCells()
@@ -201,5 +265,33 @@ public class UnitMovement : MonoBehaviour, IUnit
         {
             hexGrid.UnregisterUnit(CurrentCell);
         }
+    }
+
+    public void MoveTowardCell(HexCell targetCell)
+    {
+        if (CurrentCell == null || targetCell == null) return;
+
+        HighlightReachableCells();
+
+        //Find the reachable cell that is closest to the target cell
+        HexCell bestCell = null;
+        int bestDistance = int.MaxValue;
+
+        foreach (HexCell cell in ReachableCells())
+        {
+            int distance = hexGrid.GetDistance(cell, targetCell);
+            if (distance < bestDistance)
+            {
+                bestDistance = distance;
+                bestCell = cell;
+            }
+        }
+
+        if (bestCell != null)
+        {
+            MoveTo(bestCell);
+        }
+
+        ClearReachableCells();
     }
 }

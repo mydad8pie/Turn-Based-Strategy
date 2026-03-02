@@ -360,6 +360,8 @@
 "Assets/Code/Animal.cs"
 "Assets/Code/Camera_movment.cs"
 "Assets/Code/CellManager.cs"
+"Assets/Code/CombatManager.cs"
+"Assets/Code/ComputerAI.cs"
 "Assets/Code/Constants.cs"
 "Assets/Code/Farm.cs"
 "Assets/Code/GameManager.cs"

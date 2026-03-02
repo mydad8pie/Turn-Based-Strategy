@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             hexGrid.LoadPreset(presetPath);
             SpawnSettler();
+            SpawnComputerSettler();
             SpawnAnimalsOnGreenCells(10); // Spawning 10 animals on green cells
         }
         else
@@ -22,6 +23,32 @@ public class GameManager : MonoBehaviour
             Debug.LogError("HexGrid is not assigned.");
         }
     }
+
+    void SpawnComputerSettler()
+{
+    if (settlerPrefab == null) return;
+
+    List<HexCell> yellowCells = FindYellowCells();
+
+    // Remove cells already occupied by player units
+    yellowCells.RemoveAll(cell => hexGrid.IsCellOccupied(cell));
+
+    if (yellowCells.Count > 0)
+        {
+            HexCell randomYellowCell = yellowCells[Random.Range(0, yellowCells.Count)];
+            Vector3 spawnPosition = randomYellowCell.Position + new Vector3(0, 3f, 0);
+            GameObject settler = Instantiate(settlerPrefab, spawnPosition, Quaternion.identity);
+
+            SettlerMovement settlerMovement = settler.GetComponent<SettlerMovement>();
+            if (settlerMovement != null)
+            {
+                settlerMovement.hexGrid = hexGrid;
+                settlerMovement.CurrentCell = randomYellowCell;
+                settlerMovement.ownerIndex = 1; // Computer owned
+                hexGrid.RegisterUnit(randomYellowCell, settlerMovement);
+            }
+        }
+    }   
 
     void SpawnSettler()
     {
@@ -43,6 +70,8 @@ public class GameManager : MonoBehaviour
             {
                 settlerMovement.hexGrid = hexGrid;
                 settlerMovement.CurrentCell = randomYellowCell;
+                settlerMovement.ownerIndex = 0; // Player owned
+                hexGrid.RegisterUnit(randomYellowCell, settlerMovement);
             }
 
             FocusCameraOnSettler(settler);

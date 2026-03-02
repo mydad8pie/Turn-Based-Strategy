@@ -127,15 +127,16 @@ public class TurnManager : MonoBehaviour
     // Function to start the computer turn
     void StartComputerTurn(int computerPlayerIndex)
     {
-        Debug.Log("Starting turn " + turnCounter + " for computer" + computerPlayerIndex);
-        ExecuteComputerActions(computerPlayerIndex);
-    }
-
-    // Function to execute the computer actions
-    void ExecuteComputerActions(int computerPlayerIndex)
-    {
-        new WaitForSeconds(6f);
-        Debug.Log("Computer " + computerPlayerIndex + " has completed turn "+ turnCounter);
+        Debug.Log("Starting turn " + turnCounter + " for computer " + computerPlayerIndex);
+        UnitMovement[] allUnits = FindObjectsOfType<UnitMovement>();
+        foreach (UnitMovement unit in allUnits)
+        {
+            if (unit.ownerIndex == computerPlayerIndex)
+            {
+                unit.ResetMoveRange();
+            }
+        }
+        ComputerAI.Instance.ExecuteTurn();
     }
 
     // Function to end the player turn
@@ -154,5 +155,11 @@ public class TurnManager : MonoBehaviour
         {
             Debug.Log("It is not your turn");
         }
+    }
+    public void EndComputerTurn()
+    {
+        Debug.Log("Computer has completed turn " + turnCounter);
+        // The coroutine in TurnRoutine is already waiting via WaitForSeconds
+        // so we just log for now, the routine moves on automatically
     }
 }
