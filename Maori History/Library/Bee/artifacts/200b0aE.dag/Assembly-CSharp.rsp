@@ -367,6 +367,7 @@
 "Assets/Code/GameManager.cs"
 "Assets/Code/GameSceneManager.cs"
 "Assets/Code/GameStartManager.cs"
+"Assets/Code/Health.cs"
 "Assets/Code/HighlightManager.cs"
 "Assets/Code/LookAtCamera.cs"
 "Assets/Code/Map Gen/ChunkPreset.cs"

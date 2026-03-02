@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance { get; private set; }
@@ -24,17 +25,21 @@ public class CombatManager : MonoBehaviour
         // Can't attack your own units
         if (attacker.ownerIndex == defender.ownerIndex) return false;
 
-        Debug.Log(attacker.gameObject.name + " attacks " + defender.gameObject.name);
+        if(!attacker.gameObject.name.Contains("Warrior"))
+        {
+            Debug.Log(attacker.gameObject.name + " cannot attack - only Warriors can deal damage.");
+            return false;
+        }
 
-        // For now combat is simple — attacker always wins
-        // We can add health later
-        KillUnit(defender);
+        Health defenderHealth = defender.GetComponent<Health>();
+        if (defenderHealth == null)
+        {
+            Debug.Log(defender.gameObject.name + " has no Health component and cannot be attacked.");
+            return false;
+        }
+
+        Debug.Log(attacker.gameObject.name + " attacks " + defender.gameObject.name + " for 5 damage.");
+        defenderHealth.TakeDamage(5);
         return true;
-    }
-
-    void KillUnit(UnitMovement unit)
-    {
-        Debug.Log(unit.gameObject.name + " has been defeated!");
-        Destroy(unit.gameObject);
     }
 }

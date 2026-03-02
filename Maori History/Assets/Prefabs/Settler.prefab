@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 5609036324748438590}
   - component: {fileID: 8326167650335936874}
   - component: {fileID: 5033091631553569781}
+  - component: {fileID: 1015433855680476883}
   m_Layer: 0
   m_Name: Settler
   m_TagString: Untagged
@@ -230,3 +231,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexGrid: {fileID: 548448309045062687, guid: 9176f72f48f8944a09561a47d79616dc, type: 3}
   maxMoveRange: 1
+  ownerIndex: 0
+  currentMoveRange: 0
+--- !u!114 &1015433855680476883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792008143498414379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279589bdb38f1400b945a2029b62c010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: 0
+  healthBarSlider: {fileID: 0}
+  healthText: {fileID: 0}

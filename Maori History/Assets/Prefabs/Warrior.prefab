@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7185883314430161098}
   - component: {fileID: 6561631091248257455}
   - component: {fileID: 6659713876760310787}
+  - component: {fileID: 3363178298074710602}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Warrior
@@ -123,6 +124,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexGrid: {fileID: 548448309045062687, guid: 9176f72f48f8944a09561a47d79616dc, type: 3}
   maxMoveRange: 0
+  ownerIndex: 0
+  currentMoveRange: 0
+--- !u!114 &3363178298074710602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229128911863813544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279589bdb38f1400b945a2029b62c010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
+  healthBarSlider: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &8694348238539393558
 GameObject:
   m_ObjectHideFlags: 0

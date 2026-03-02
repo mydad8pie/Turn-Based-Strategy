@@ -80,6 +80,13 @@ public class UnitMovement : MonoBehaviour, IUnit, IUnitMovement
                     UnitMovement occupantMovement = occupant.GameObject.GetComponent<UnitMovement>();
                     if (occupantMovement != null && occupantMovement.ownerIndex != ownerIndex)
                     {
+
+                        //onlt warrior can attack
+                        if (!gameObject.name.Contains("Warrior"))
+                        {
+                            Debug.Log("Only warriors can attack!");
+                            return;
+                        }
                         // Attack instead of moveing
                         currentMoveRange -= distance;
                         CombatManager.Instance.TryAttack(this, occupantMovement);
@@ -160,16 +167,20 @@ public class UnitMovement : MonoBehaviour, IUnit, IUnitMovement
                             // if it friendly, skip it
                             if (occupantMovement != null && occupantMovement.ownerIndex != ownerIndex)
                             {
-                                reachableCells.Add(neighbor);
-
-                                if (!originalColors.ContainsKey(neighbor))
+                                if (gameObject.name.Contains("Warrior"))
                                 {
-                                    originalColors[neighbor] = neighbor.Color;
+                                    reachableCells.Add(neighbor);
+                                    if (!originalColors.ContainsKey(neighbor))
+                                    {
+                                        originalColors[neighbor] = neighbor.Color;
+                                    }
                                 }
+
+                                continue;
 
                             }
 
-                            continue;
+                            
                         }
 
 
