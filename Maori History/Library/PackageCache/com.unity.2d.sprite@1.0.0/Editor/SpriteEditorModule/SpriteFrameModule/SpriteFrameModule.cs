@@ -24,13 +24,14 @@ namespace UnityEditor.U2D.Sprites
 
         private const float kOverlapTolerance = 0.00001f;
         private StringBuilder m_SpriteNameStringBuilder;
+        bool m_SpriteRectValidated = false;
 
         private List<Rect> m_PotentialRects;
         public List<Rect> potentialRects
         {
             set => m_PotentialRects = value;
         }
-
+        internal static Func<string, string, string, string, string, int> onShowComplexDialog = EditorUtility.DisplayDialogComplex;
         public SpriteFrameModule(ISpriteEditor sw, IEventSystem es, IUndoSystem us, IAssetDatabase ad) :
             base("Sprite Editor", sw, es, us, ad)
         {}
@@ -68,6 +69,7 @@ namespace UnityEditor.U2D.Sprites
         public override void OnModuleActivate()
         {
             base.OnModuleActivate();
+            m_SpriteRectValidated = false;
             spriteEditor.enableMouseMoveEvent = true;
             m_SpriteFrameModuleContext = new SpriteFrameModuleContext(this);
             ShortcutIntegration.instance.contextManager.RegisterToolContext(m_SpriteFrameModuleContext);
@@ -75,9 +77,41 @@ namespace UnityEditor.U2D.Sprites
             m_PotentialRects = null;
         }
 
+        void ValidateSpriteRects()
+        {
+            if (m_TextureDataProvider != null && !m_SpriteRectValidated)
+            {
+                m_SpriteRectValidated = true;
+                int width, height;
+                m_TextureDataProvider.GetTextureActualWidthAndHeight(out width, out height);
+                for (int i = 0; i < m_RectsCache.spriteRects.Count; ++i)
+                {
+                    var s = m_RectsCache.spriteRects[i];
+                    if(s.rect.x < 0 || s.rect.y < 0 || s.rect.xMax > width || s.rect.yMax > height)
+                    {
+                        var response = onShowComplexDialog("Invalid Sprite Rect", $"Sprite Rect {s.name} is outside the bounds of the texture.", "Remove", "Keep", "Resize");
+                        switch (response)
+                        {
+                            case 0:
+                                m_RectsCache.Remove(s);
+                                i--;
+                                spriteEditor.SetDataModified();
+                                break;
+                            case 2:
+                                s.rect = ClampSpriteRect(s.rect, width, height);
+                                spriteEditor.SetDataModified();
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+
         public override void OnModuleDeactivate()
         {
             base.OnModuleDeactivate();
+            EditorApplication.delayCall -= ValidateSpriteRects;
+            m_SpriteRectValidated = true;
             ShortcutIntegration.instance.contextManager.DeregisterToolContext(m_SpriteFrameModuleContext);
             m_PotentialRects = null;
             m_AlphaPixelCache = null;

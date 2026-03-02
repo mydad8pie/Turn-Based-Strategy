@@ -1,37 +1,33 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-      History/Packages/manifest.json
+    m_FilePath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638553798600000000
-    m_Hash: 3475650234
+      ticks: 639043134350000000
+    m_Hash: 2514984569
   m_LockFileStatus:
-    m_FilePath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-      History/Packages/packages-lock.json
+    m_FilePath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638553798600000000
-    m_Hash: 2917073647
+      ticks: 639043134460000000
+    m_Hash: 794875131
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-  History/Packages
-m_EditorVersion: 2022.3.27f1 (73effa14754f)
+m_ProjectPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Packages
+m_EditorVersion: 2022.3.62f3 (96770f904ca7)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@2.3.1
+- packageId: com.unity.collab-proxy@2.7.1
   testable: 0
   isDirectDependency: 1
-  version: 2.3.1
+  version: 2.7.1
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.collab-proxy@2.3.1
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.collab-proxy@2.7.1
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -40,7 +36,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Editor
-  type: assets
+  type: 
   description: The package gives you the ability to use Unity Version Control in
     the Unity editor. To use Unity Version Control, a subscription is required. Learn
     more about how you can get started for free by visiting https://unity.com/solutions/version-control
@@ -48,82 +44,10 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.2.3-preview
-    - 1.2.4-preview
-    - 1.2.6
-    - 1.2.7
-    - 1.2.9
-    - 1.2.11
-    - 1.2.15
-    - 1.2.16
-    - 1.2.17-preview.3
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.6
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.9
-    - 1.5.7
-    - 1.6.0
-    - 1.7.1
-    - 1.8.0
-    - 1.9.0
-    - 1.10.2
-    - 1.11.2
-    - 1.12.5
-    - 1.13.5
-    - 1.14.1
-    - 1.14.4
-    - 1.14.7
-    - 1.14.9
-    - 1.14.12
-    - 1.14.13
-    - 1.14.15
-    - 1.14.16
-    - 1.14.17
-    - 1.14.18
-    - 1.15.1
-    - 1.15.4
-    - 1.15.7
-    - 1.15.9
-    - 1.15.12
-    - 1.15.13
-    - 1.15.15
-    - 1.15.16
-    - 1.15.17
-    - 1.15.18
-    - 1.17.0
-    - 1.17.1
-    - 1.17.2
-    - 1.17.6
-    - 1.17.7
-    - 2.0.0-preview.6
-    - 2.0.0-preview.8
-    - 2.0.0-preview.15
-    - 2.0.0-preview.17
-    - 2.0.0-preview.20
-    - 2.0.0-preview.21
-    - 2.0.0-preview.22
-    - 2.0.0
-    - 2.0.1
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
-    - 2.2.0
-    - 2.3.1
-    - 2.4.3
+    - 2.7.1
     compatible:
-    - 2.3.1
-    - 2.4.3
-    recommended: 2.3.1
+    - 2.7.1
+    recommended: 2.7.1
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -142,6 +66,7 @@ m_ResolvedPackages:
   - teams
   - version
   - vcs
+  - uvcs
   registry:
     id: main
     name: 
@@ -152,29 +77,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638448201880000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.3/manual/index.html
+  datePublishedTicks: 0
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.7/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 613362ccb4468f55ee42e0a35809fb9a61f3f8f1
+    revision: cf9c21f84be18cbe2d6a93ec7cfbeb01b4310bbe
     path: 
   unityLifecycle:
-    version: 2.3.1
+    version: 2.7.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.feature.development@1.0.1
   testable: 0
   isDirectDependency: 1
   version: 1.0.1
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.feature.development@1.0.1
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.feature.development@1.0.1
   assetPath: Packages/com.unity.feature.development
   name: com.unity.feature.development
   displayName: Engineering
@@ -224,17 +149,17 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.ide.rider
-    version: 3.0.28
+    version: 3.0.36
   - name: com.unity.ide.vscode
     version: 1.2.5
   - name: com.unity.editorcoroutines
     version: 1.0.0
   - name: com.unity.performance.profile-analyzer
-    version: 1.2.2
+    version: 1.2.3
   - name: com.unity.testtools.codecoverage
-    version: 1.2.5
+    version: 1.2.6
   - name: com.unity.settings-manager
-    version: 2.0.1
+    version: 2.1.0
   keywords: []
   registry:
     id: main
@@ -262,13 +187,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.textmeshpro@3.0.6
+  fingerprint: 
+- packageId: com.unity.textmeshpro@3.0.7
   testable: 0
   isDirectDependency: 1
-  version: 3.0.6
+  version: 3.0.7
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.textmeshpro@3.0.6
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.textmeshpro@3.0.7
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -277,7 +202,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Text Rendering
-  type: asset
+  type: 
   description: 'TextMeshPro is the ultimate text solution for Unity. It''s the perfect
     replacement for Unity''s UI Text and the legacy Text Mesh.
 
@@ -302,119 +227,10 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 0.1.2
-    - 1.0.21
-    - 1.0.23
-    - 1.0.25
-    - 1.0.26
-    - 1.1.0
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.2.4
-    - 1.3.0-preview
-    - 1.3.0
-    - 1.4.0-preview.1b
-    - 1.4.0-preview.2a
-    - 1.4.0-preview.3a
-    - 1.4.0
-    - 1.4.1-preview.1
-    - 1.4.1
-    - 1.5.0-preview.1
-    - 1.5.0-preview.2
-    - 1.5.0-preview.3
-    - 1.5.0-preview.4
-    - 1.5.0-preview.5
-    - 1.5.0-preview.6
-    - 1.5.0-preview.7
-    - 1.5.0-preview.8
-    - 1.5.0-preview.10
-    - 1.5.0-preview.11
-    - 1.5.0-preview.12
-    - 1.5.0-preview.13
-    - 1.5.0-preview.14
-    - 1.5.0
-    - 1.5.1
-    - 1.5.3
-    - 1.5.4
-    - 1.5.5
-    - 1.5.6
-    - 1.6.0-preview.1
-    - 2.0.0
-    - 2.0.1-preview.1
-    - 2.0.1
-    - 2.1.0-preview.1
-    - 2.1.0-preview.2
-    - 2.1.0-preview.3
-    - 2.1.0-preview.4
-    - 2.1.0-preview.5
-    - 2.1.0-preview.7
-    - 2.1.0-preview.8
-    - 2.1.0-preview.10
-    - 2.1.0-preview.11
-    - 2.1.0-preview.12
-    - 2.1.0-preview.13
-    - 2.1.0-preview.14
-    - 2.1.0
-    - 2.1.1
-    - 2.1.3
-    - 2.1.4
-    - 2.1.5
-    - 2.1.6
-    - 2.2.0-preview.1
-    - 2.2.0-preview.2
-    - 2.2.0-preview.3
-    - 3.0.0-preview.1
-    - 3.0.0-preview.3
-    - 3.0.0-preview.4
-    - 3.0.0-preview.5
-    - 3.0.0-preview.7
-    - 3.0.0-preview.8
-    - 3.0.0-preview.10
-    - 3.0.0-preview.11
-    - 3.0.0-preview.12
-    - 3.0.0-preview.13
-    - 3.0.0-preview.14
-    - 3.0.0
-    - 3.0.1
-    - 3.0.3
-    - 3.0.4
-    - 3.0.5
-    - 3.0.6
     - 3.0.7
-    - 3.0.8
-    - 3.0.9
-    - 3.2.0-pre.1
-    - 3.2.0-pre.2
-    - 3.2.0-pre.3
-    - 3.2.0-pre.4
-    - 3.2.0-pre.5
-    - 3.2.0-pre.6
-    - 3.2.0-pre.7
-    - 3.2.0-pre.8
-    - 3.2.0-pre.9
-    - 3.2.0-pre.10
-    - 4.0.0-pre.1
-    - 4.0.0-pre.2
     compatible:
-    - 3.0.6
     - 3.0.7
-    - 3.0.8
-    - 3.0.9
-    - 3.2.0-pre.1
-    - 3.2.0-pre.2
-    - 3.2.0-pre.3
-    - 3.2.0-pre.4
-    - 3.2.0-pre.5
-    - 3.2.0-pre.6
-    - 3.2.0-pre.7
-    - 3.2.0-pre.8
-    - 3.2.0-pre.9
-    - 3.2.0-pre.10
-    - 4.0.0-pre.1
-    - 4.0.0-pre.2
-    recommended: 3.0.9
+    recommended: 3.0.7
     deprecated: []
   dependencies:
   - name: com.unity.ugui
@@ -442,29 +258,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637547111200000000
-  documentationUrl: 
+  datePublishedTicks: 0
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-    revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
+    revision: 5c364f204e10eaec84fcbff640ad4d833774c1ed
     path: 
   unityLifecycle:
-    version: 3.0.6
+    version: 3.0.7
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.timeline@1.7.6
+  fingerprint: 
+- packageId: com.unity.timeline@1.7.7
   testable: 0
   isDirectDependency: 1
-  version: 1.7.6
+  version: 1.7.7
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.timeline@1.7.6
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.timeline@1.7.7
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -473,110 +289,17 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: Use Unity Timeline to create cinematic content, game-play sequences,
     audio sequences, and complex particle effects.
   status: 0
   errors: []
   versions:
     all:
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.2.4
-    - 1.2.5
-    - 1.2.6
-    - 1.2.7
-    - 1.2.9
-    - 1.2.10
-    - 1.2.11
-    - 1.2.12
-    - 1.2.13
-    - 1.2.14
-    - 1.2.15
-    - 1.2.16
-    - 1.2.17
-    - 1.2.18
-    - 1.3.0-preview.2
-    - 1.3.0-preview.3
-    - 1.3.0-preview.5
-    - 1.3.0-preview.6
-    - 1.3.0-preview.7
-    - 1.3.0
-    - 1.3.1
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.6
-    - 1.3.7
-    - 1.4.0-preview.1
-    - 1.4.0-preview.2
-    - 1.4.0-preview.3
-    - 1.4.0-preview.5
-    - 1.4.0-preview.6
-    - 1.4.0-preview.7
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 1.4.5
-    - 1.4.6
-    - 1.4.7
-    - 1.4.8
-    - 1.5.0-pre.2
-    - 1.5.0-preview.1
-    - 1.5.0-preview.2
-    - 1.5.0-preview.3
-    - 1.5.0-preview.4
-    - 1.5.0-preview.5
-    - 1.5.1-pre.1
-    - 1.5.1-pre.2
-    - 1.5.1-pre.3
-    - 1.5.2
-    - 1.5.4
-    - 1.5.5
-    - 1.5.6
-    - 1.5.7
-    - 1.6.0-pre.1
-    - 1.6.0-pre.3
-    - 1.6.0-pre.4
-    - 1.6.0-pre.5
-    - 1.6.1
-    - 1.6.2
-    - 1.6.3
-    - 1.6.4
-    - 1.6.5
-    - 1.7.0-pre.1
-    - 1.7.0-pre.2
-    - 1.7.0
-    - 1.7.1
-    - 1.7.2
-    - 1.7.3
-    - 1.7.4
-    - 1.7.5
-    - 1.7.6
-    - 1.8.0
-    - 1.8.1
-    - 1.8.2
-    - 1.8.3
-    - 1.8.4
-    - 1.8.5
-    - 1.8.6
-    - 1.8.7
+    - 1.7.7
     compatible:
-    - 1.7.6
-    - 1.8.0
-    - 1.8.1
-    - 1.8.2
-    - 1.8.3
-    - 1.8.4
-    - 1.8.5
-    - 1.8.6
-    - 1.8.7
-    recommended: 1.7.6
+    - 1.7.7
+    recommended: 1.7.7
     deprecated: []
   dependencies:
   - name: com.unity.modules.director
@@ -612,29 +335,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638326112840000000
+  datePublishedTicks: 0
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.timeline@1.7/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: 02f49ada64a9f88044207cf42ba407dc634ef8e6
+    revision: 36c3480685dcb744f098f1a1efe0623247ffab49
     path: 
   unityLifecycle:
-    version: 1.7.6
+    version: 1.7.7
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.ugui@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -653,9 +376,6 @@ m_ResolvedPackages:
   versions:
     all:
     - 1.0.0
-    - 3.0.0-exp.1
-    - 3.0.0-exp.3
-    - 3.0.0-exp.4
     compatible:
     - 1.0.0
     recommended: 1.0.0
@@ -701,13 +421,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.vectorgraphics@2.0.0-preview.24
   testable: 0
   isDirectDependency: 1
   version: 2.0.0-preview.24
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.24
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.24
   assetPath: Packages/com.unity.vectorgraphics
   name: com.unity.vectorgraphics
   displayName: Vector Graphics
@@ -762,6 +482,8 @@ m_ResolvedPackages:
     - 2.0.0-preview.21
     - 2.0.0-preview.23
     - 2.0.0-preview.24
+    - 2.0.0-preview.25
+    - 3.0.0-preview.2
     compatible:
     - 2.0.0-preview.2
     - 2.0.0-preview.3
@@ -785,45 +507,44 @@ m_ResolvedPackages:
     - 2.0.0-preview.21
     - 2.0.0-preview.23
     - 2.0.0-preview.24
+    - 2.0.0-preview.25
     recommended: 
     deprecated: []
   dependencies:
-  - name: com.unity.2d.sprite
-    version: 1.0.0
   - name: com.unity.ugui
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.physics2d
+  - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.physics2d
+    version: 1.0.0
   - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
     version: 1.0.0
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
-  - name: com.unity.modules.unitywebrequesttexture
-    version: 1.0.0
   - name: com.unity.modules.unitywebrequestwww
     version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.2d.sprite
+  - name: com.unity.modules.unitywebrequesttexture
     version: 1.0.0
+  resolvedDependencies:
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.modules.imageconversion
+  - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.modules.physics2d
     version: 1.0.0
@@ -831,9 +552,9 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
-  - name: com.unity.modules.unitywebrequest
+  - name: com.unity.modules.imageconversion
     version: 1.0.0
-  - name: com.unity.modules.unitywebrequesttexture
+  - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.modules.unitywebrequestwww
     version: 1.0.0
@@ -844,6 +565,8 @@ m_ResolvedPackages:
   - name: com.unity.modules.unitywebrequestaudio
     version: 1.0.0
   - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequesttexture
     version: 1.0.0
   keywords:
   - vector
@@ -876,13 +599,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.visualscripting@1.9.4
   testable: 0
   isDirectDependency: 1
   version: 1.9.4
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.visualscripting@1.9.4
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.visualscripting@1.9.4
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -908,32 +631,11 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.5.0
-    - 1.5.1-pre.3
-    - 1.5.1-pre.5
-    - 1.5.1
-    - 1.5.2
-    - 1.6.0-pre.3
-    - 1.6.0
-    - 1.6.1
-    - 1.7.1
-    - 1.7.2
-    - 1.7.3
-    - 1.7.5
-    - 1.7.6
-    - 1.7.7
-    - 1.7.8
-    - 1.8.0-pre.1
-    - 1.8.0
-    - 1.9.0
-    - 1.9.1
-    - 1.9.2
     - 1.9.4
     compatible:
     - 1.9.4
     recommended: 1.9.4
-    deprecated:
-    - 1.8.0-pre.1
+    deprecated: []
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -959,7 +661,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638488567680000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -975,13 +677,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.ai@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1031,13 +733,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.androidjni@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.androidjni@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1086,13 +788,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.animation@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.animation@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1142,13 +844,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.assetbundle@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.assetbundle@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1198,13 +900,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.audio@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.audio@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1254,13 +956,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.cloth@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.cloth@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1314,13 +1016,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.director@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.director@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -1378,13 +1080,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.imageconversion@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.imageconversion@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -1435,13 +1137,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.imgui@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.imgui@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -1491,13 +1193,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.jsonserialize@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -1547,13 +1249,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.particlesystem@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.particlesystem@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -1603,13 +1305,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.physics@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.physics@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -1659,13 +1361,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.physics2d@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.physics2d@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -1715,13 +1417,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.screencapture@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.screencapture@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -1775,13 +1477,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.terrain@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.terrain@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -1831,13 +1533,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.terrainphysics@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -1895,13 +1597,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.tilemap@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.tilemap@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -1954,13 +1656,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.ui@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.ui@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2010,13 +1712,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.uielements@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.uielements@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2078,13 +1780,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.umbra@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.umbra@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -2134,13 +1836,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unityanalytics@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -2198,13 +1900,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequest@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -2254,13 +1956,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequestassetbundle@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -2318,13 +2020,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequestaudio@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -2382,13 +2084,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequesttexture@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -2446,13 +2148,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequestwww@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -2526,13 +2228,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.vehicles@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.vehicles@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -2586,13 +2288,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.video@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.video@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -2654,13 +2356,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.vr@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.vr@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -2724,13 +2426,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.wind@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.wind@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -2780,13 +2482,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.xr@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.xr@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -2848,13 +2550,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.subsystems@1.0.0
   testable: 0
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.modules.subsystems@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -2908,13 +2610,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.sprite@1.0.0
   testable: 0
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.2d.sprite@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.2d.sprite@1.0.0
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -2967,13 +2669,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 0
   version: 2.0.22
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.ide.visualstudio@2.0.22
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -2982,7 +2684,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -2990,29 +2692,6 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.0.2
-    - 1.0.3
-    - 1.0.4
-    - 1.0.9
-    - 1.0.10
-    - 1.0.11
-    - 2.0.0
-    - 2.0.1
-    - 2.0.2
-    - 2.0.3
-    - 2.0.5
-    - 2.0.7
-    - 2.0.8
-    - 2.0.9
-    - 2.0.11
-    - 2.0.12
-    - 2.0.14
-    - 2.0.15
-    - 2.0.16
-    - 2.0.17
-    - 2.0.18
-    - 2.0.20
-    - 2.0.21
     - 2.0.22
     compatible:
     - 2.0.22
@@ -3041,7 +2720,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638326061910000000
+  datePublishedTicks: 0
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
@@ -3057,13 +2736,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.ide.rider@3.0.28
+  fingerprint: 
+- packageId: com.unity.ide.rider@3.0.36
   testable: 0
   isDirectDependency: 0
-  version: 3.0.28
+  version: 3.0.36
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.ide.rider@3.0.28
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.ide.rider@3.0.36
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -3072,7 +2751,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: The JetBrains Rider Editor package provides an integration for using
     the JetBrains Rider IDE as a code editor for Unity. It adds support for generating
     .csproj files for code completion and auto-discovery of installations.
@@ -3080,53 +2759,10 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.0.2
-    - 1.0.6
-    - 1.0.8
-    - 1.1.0
-    - 1.1.1
-    - 1.1.2-preview
-    - 1.1.2-preview.2
-    - 1.1.3-preview.1
-    - 1.1.4-preview
-    - 1.1.4
-    - 1.2.0-preview
-    - 1.2.1
-    - 2.0.0-preview
-    - 2.0.1
-    - 2.0.2
-    - 2.0.3
-    - 2.0.5
-    - 2.0.7
-    - 3.0.1
-    - 3.0.2
-    - 3.0.3
-    - 3.0.4
-    - 3.0.5
-    - 3.0.6
-    - 3.0.7
-    - 3.0.9
-    - 3.0.10
-    - 3.0.12
-    - 3.0.13
-    - 3.0.14
-    - 3.0.15
-    - 3.0.16
-    - 3.0.17
-    - 3.0.18
-    - 3.0.20
-    - 3.0.21
-    - 3.0.22
-    - 3.0.24
-    - 3.0.25
-    - 3.0.26
-    - 3.0.27
-    - 3.0.28
-    - 3.0.31
+    - 3.0.36
     compatible:
-    - 3.0.28
-    - 3.0.31
-    recommended: 3.0.31
+    - 3.0.36
+    recommended: 3.0.36
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -3145,29 +2781,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638447139880000000
+  datePublishedTicks: 0
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: f4880c72477e9bbd7321c0dbda4428fa10d916df
+    revision: b5315083ab3861d21f6ab2ed0d9514daf04bf208
     path: 
   unityLifecycle:
-    version: 3.0.28
+    version: 3.0.36
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ide.vscode@1.2.5
   testable: 0
   isDirectDependency: 0
   version: 1.2.5
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.ide.vscode@1.2.5
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.ide.vscode@1.2.5
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -3176,7 +2812,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: Code editor integration for supporting Visual Studio Code as code
     editor for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -3184,18 +2820,6 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.0.2
-    - 1.0.3
-    - 1.0.7
-    - 1.1.0
-    - 1.1.2
-    - 1.1.3
-    - 1.1.4
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.2.4
     - 1.2.5
     compatible:
     - 1.2.5
@@ -3214,7 +2838,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637800255360000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -3230,13 +2854,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.editorcoroutines@1.0.0
   testable: 0
   isDirectDependency: 0
   version: 1.0.0
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.editorcoroutines@1.0.0
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.editorcoroutines@1.0.0
   assetPath: Packages/com.unity.editorcoroutines
   name: com.unity.editorcoroutines
   displayName: Editor Coroutines
@@ -3245,7 +2869,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: 'The editor coroutines package allows developers to start constructs
     similar to Unity''s monobehaviour based coroutines within the editor using abitrary
     objects. '
@@ -3253,12 +2877,6 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 0.0.1-preview.3
-    - 0.0.1-preview.4
-    - 0.0.1-preview.5
-    - 0.0.2-preview.1
-    - 0.1.0-preview.1
-    - 0.1.0-preview.2
     - 1.0.0
     compatible:
     - 1.0.0
@@ -3280,7 +2898,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637232611380000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -3296,13 +2914,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.performance.profile-analyzer@1.2.2
+  fingerprint: 
+- packageId: com.unity.performance.profile-analyzer@1.2.3
   testable: 0
   isDirectDependency: 0
-  version: 1.2.2
+  version: 1.2.3
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.performance.profile-analyzer@1.2.2
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.performance.profile-analyzer@1.2.3
   assetPath: Packages/com.unity.performance.profile-analyzer
   name: com.unity.performance.profile-analyzer
   displayName: Profile Analyzer
@@ -3311,7 +2929,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: "The Profile Analyzer tool supports the standard Unity Profiler. You
     can use it to analyze multiple frames and multiple data sets of the CPU data
     in the Profiler.\n\nMain features: \n\u25AA Multi-frame analysis of a single
@@ -3321,23 +2939,10 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 0.4.0-preview.3
-    - 0.4.0-preview.5
-    - 0.4.0-preview.6
-    - 0.5.0-preview.1
-    - 0.6.0-preview.1
-    - 0.7.0-preview.4
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.0.3
-    - 1.1.0-pre.2
-    - 1.1.0
-    - 1.1.1
-    - 1.2.2
+    - 1.2.3
     compatible:
-    - 1.2.2
-    recommended: 1.2.2
+    - 1.2.3
+    recommended: 1.2.3
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -3352,29 +2957,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638108624620000000
+  datePublishedTicks: 0
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@1.2/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.performance.profile-analyzer.git
-    revision: 2c63f931588caa60a1fef33b1b250b20d952dc58
+    revision: 835e61d94bd201d0dea5763dff75e86b6b61de29
     path: 
   unityLifecycle:
-    version: 1.2.2
+    version: 1.2.3
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.test-framework@1.1.33
   testable: 0
   isDirectDependency: 0
   version: 1.1.33
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.test-framework@1.1.33
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.test-framework@1.1.33
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -3383,84 +2988,15 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Unity Test Framework
-  type: asset
+  type: 
   description: Test framework for running Edit mode and Play mode tests in Unity.
   status: 0
   errors: []
   versions:
     all:
-    - 0.0.4-preview
-    - 0.0.29-preview
-    - 1.0.0
-    - 1.0.7
-    - 1.0.9
-    - 1.0.11
-    - 1.0.12
-    - 1.0.13
-    - 1.0.14
-    - 1.0.16
-    - 1.0.17
-    - 1.0.18
-    - 1.1.0
-    - 1.1.1
-    - 1.1.2
-    - 1.1.3
-    - 1.1.5
-    - 1.1.8
-    - 1.1.9
-    - 1.1.11
-    - 1.1.13
-    - 1.1.14
-    - 1.1.16
-    - 1.1.18
-    - 1.1.19
-    - 1.1.20
-    - 1.1.22
-    - 1.1.24
-    - 1.1.26
-    - 1.1.27
-    - 1.1.29
-    - 1.1.30
-    - 1.1.31
     - 1.1.33
-    - 1.3.0
-    - 1.3.1
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 2.0.1-exp.1
-    - 2.0.1-exp.2
-    - 2.0.1-pre.12
-    - 2.0.1-pre.18
     compatible:
     - 1.1.33
-    - 1.3.0
-    - 1.3.1
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 2.0.1-exp.1
-    - 2.0.1-exp.2
-    - 2.0.1-pre.12
-    - 2.0.1-pre.18
     recommended: 1.1.33
     deprecated: []
   dependencies:
@@ -3490,7 +3026,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637938212700000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -3506,13 +3042,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.testtools.codecoverage@1.2.5
+  fingerprint: 
+- packageId: com.unity.testtools.codecoverage@1.2.6
   testable: 0
   isDirectDependency: 0
-  version: 1.2.5
+  version: 1.2.6
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.testtools.codecoverage@1.2.5
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.testtools.codecoverage@1.2.6
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -3521,7 +3057,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: Use this package to export code coverage data and reports from your
     automated tests. Additionally, the Code Coverage package offers a Coverage Recording
     feature which allows capturing coverage data on demand, for manual testing or
@@ -3530,40 +3066,10 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 0.2.0-preview
-    - 0.2.1-preview
-    - 0.2.2-preview
-    - 0.2.3-preview
-    - 0.3.0-preview
-    - 0.3.1-preview
-    - 0.4.0-preview
-    - 0.4.1-preview
-    - 0.4.2-preview
-    - 0.4.3-preview
-    - 1.0.0-pre.1
-    - 1.0.0-pre.2
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.0.0
-    - 1.0.1
-    - 1.1.0
-    - 1.1.1
-    - 1.2.0-exp.1
-    - 1.2.0-exp.2
-    - 1.2.0-exp.3
-    - 1.2.0-exp.4
-    - 1.2.0-exp.5
-    - 1.2.0-exp.6
-    - 1.2.0-exp.7
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.2.4
-    - 1.2.5
+    - 1.2.6
     compatible:
-    - 1.2.5
-    recommended: 1.2.5
+    - 1.2.6
+    recommended: 1.2.6
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -3580,7 +3086,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.settings-manager
-    version: 2.0.1
+    version: 2.1.0
   keywords:
   - test
   - coverage
@@ -3596,29 +3102,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638386640140000000
+  datePublishedTicks: 0
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.testtools.codecoverage.git
-    revision: afeb9febf6597fcc31c99ca116d6a82b1e97b9f5
+    revision: 959db8ff97eedf9b211ad5cf320b87ac01f1e90f
     path: 
   unityLifecycle:
-    version: 1.2.5
+    version: 1.2.6
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.settings-manager@2.0.1
+  fingerprint: 
+- packageId: com.unity.settings-manager@2.1.0
   testable: 0
   isDirectDependency: 0
-  version: 2.0.1
+  version: 2.1.0
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.settings-manager@2.0.1
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.settings-manager@2.1.0
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
@@ -3627,24 +3133,17 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: A framework for making any serializable field a setting, complete
     with a pre-built settings interface.
   status: 0
   errors: []
   versions:
     all:
-    - 0.1.0-preview.4
-    - 0.1.0-preview.8
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.0.3
-    - 2.0.0
-    - 2.0.1
+    - 2.1.0
     compatible:
-    - 2.0.1
-    recommended: 2.0.1
+    - 2.1.0
+    recommended: 2.1.0
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -3659,29 +3158,29 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637744099390000000
-  documentationUrl: 
+  datePublishedTicks: 0
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.settings-manager@2.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.settings-manager.git
-    revision: 9b7c12d04ef880168151c127fd6b37b5931197dc
+    revision: 6eb5ed85eaf3276cc09f0cc4fc3311c72f0fc196
     path: 
   unityLifecycle:
-    version: 2.0.1
+    version: 2.1.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
   version: 1.0.6
   source: 1
-  resolvedPath: /Users/declanmonk/Documents/GitHub/My project/Turn-Based-Strategy/Maori
-    History/Library/PackageCache/com.unity.ext.nunit@1.0.6
+  resolvedPath: /Users/declanmonk/Documents/GitHub/Turn-Based-Strategy/Maori History/Library/PackageCache/com.unity.ext.nunit@1.0.6
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -3690,29 +3189,16 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Libraries
-  type: asset
+  type: 
   description: Custom version of the nunit package build to work with Unity. Used
     by the Unity Test Framework.
   status: 0
   errors: []
   versions:
     all:
-    - 0.1.5-preview
-    - 0.1.6-preview
-    - 0.1.9-preview
-    - 1.0.0
-    - 1.0.5
     - 1.0.6
-    - 2.0.2
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
     compatible:
     - 1.0.6
-    - 2.0.2
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
     recommended: 1.0.6
     deprecated: []
   dependencies: []
@@ -3731,7 +3217,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637429759280000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -3747,3 +3233,5 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
+m_BuiltInPackagesHash: 589add9c3ae0bc06545f5c61253b1928f3e64fad

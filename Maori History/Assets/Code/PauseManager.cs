@@ -86,6 +86,10 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         settingsButton.onClick.AddListener(Pause);
+
+        // Remove old listener before adding new one
+        settingsButton.onClick.RemoveAllListeners();
+        settingsButton.onClick.AddListener(Pause);
     }
 
     void Pause()
@@ -93,6 +97,10 @@ public class PauseManager : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        settingsButton.onClick.AddListener(Resume);
+
+        // Remove old listener before adding new one
+        settingsButton.onClick.RemoveAllListeners();
         settingsButton.onClick.AddListener(Resume);
     }
 

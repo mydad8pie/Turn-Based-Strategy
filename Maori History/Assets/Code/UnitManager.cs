@@ -17,6 +17,9 @@ public class UnitManager : MonoBehaviour
         builderMovement.hexGrid = FindObjectOfType<HexGrid>();
         builderMovement.CurrentCell = cell;
         units.Add(builderMovement);
+
+        // Explicitly register so the cell is blocked immediately
+        builderMovement.hexGrid.RegisterUnit(cell, builderMovement);
     }
 
     public void SpawnWarrior(HexCell cell)
@@ -27,6 +30,8 @@ public class UnitManager : MonoBehaviour
         warriorMovement.hexGrid = FindObjectOfType<HexGrid>();
         warriorMovement.CurrentCell = cell;
         units.Add(warriorMovement);
+        // Explicitly register so the cell is blocked immediately
+        warriorMovement.hexGrid.RegisterUnit(cell, warriorMovement);
     }
 
     public void SpawnSettler(HexCell cell)
@@ -37,6 +42,8 @@ public class UnitManager : MonoBehaviour
         settlerMovement.hexGrid = FindObjectOfType<HexGrid>();
         settlerMovement.CurrentCell = cell;
         units.Add(settlerMovement);
+        // Explicitly register so the cell is blocked immediately
+        settlerMovement.hexGrid.RegisterUnit(cell, settlerMovement);
     }
 
     public void DeselectAllUnits()

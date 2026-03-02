@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UnitMovement : MonoBehaviour
+public class UnitMovement : MonoBehaviour, IUnit
 {
+    public GameObject GameObject => gameObject;
     public HexCell CurrentCell { get; set; }
     public HexGrid hexGrid;
     public int maxMoveRange; // Set by derived classes
@@ -30,6 +31,9 @@ public class UnitMovement : MonoBehaviour
         }
 
         currentMoveRange = maxMoveRange;
+
+        // Register this unit on its starting cell
+        hexGrid.RegisterUnit(CurrentCell, this as IUnit);
     }
 
     public void ResetMoveRange()
@@ -48,6 +52,9 @@ public class UnitMovement : MonoBehaviour
             {
                 currentMoveRange -= distance;
 
+                // Unregister from old cell
+                hexGrid.UnregisterUnit(CurrentCell);
+
                 transform.position = targetCell.Position + Constants.UnitOffset;
 
                 if (CurrentCell != null)
@@ -56,6 +63,8 @@ public class UnitMovement : MonoBehaviour
                 }
 
                 CurrentCell = targetCell;
+                // Register on new cell
+                hexGrid.RegisterUnit(CurrentCell, this as IUnit);
 
                 ClearReachableCells();
                 if (CurrentCell != null)
@@ -99,9 +108,18 @@ public class UnitMovement : MonoBehaviour
                     HexCell neighbor = current.GetNeighbor(direction);
                     if (neighbor != null && !visited.Contains(neighbor))
                     { 
-                        if(IsColorMatch(neighbor.Color, new Color(0f, 0.16f, 1f))){
+                        // skip blue (water) cells
+                        if(IsColorMatch(neighbor.Color, new Color(0f, 0.16f, 1f)))
+                        {
                         continue; // skips blue cells
-                    }
+                        }
+                        // Skip cells that already have a unit on them
+                        if(hexGrid.IsCellOccupied(neighbor))
+                        {
+                            continue;
+                        }
+
+
                         frontier.Enqueue(neighbor);
                         visited.Add(neighbor);
                         reachableCells.Add(neighbor);
@@ -175,5 +193,13 @@ public class UnitMovement : MonoBehaviour
         return Mathf.Abs(a.r - b.r) < tolerance &&
                Mathf.Abs(a.g - b.g) < tolerance &&
                Mathf.Abs(a.b - b.b) < tolerance;
+    }
+
+    void OnDestroy()
+    {
+        if (CurrentCell != null && hexGrid != null)
+        {
+            hexGrid.UnregisterUnit(CurrentCell);
+        }
     }
 }

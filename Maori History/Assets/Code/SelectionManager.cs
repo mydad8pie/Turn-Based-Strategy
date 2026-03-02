@@ -39,6 +39,7 @@ public class SelectionManager : MonoBehaviour
         trainBuilderButton.onClick.AddListener(TrainBuilder);
         trainWarriorButton.onClick.AddListener(TrainWarrior);
         trainSettlerButton.onClick.AddListener(TrainSettler);
+        placeVillageButton.onClick.AddListener(PlaceVillage);
     }
 
     void Update()
@@ -99,7 +100,7 @@ public class SelectionManager : MonoBehaviour
                 else if (selectedUnit.gameObject.name == "Settler(Clone)")
                 {
                     settlerUI.SetActive(true);
-                    placeVillageButton.onClick.AddListener(PlaceVillage);
+                    
                 }
             }
             else

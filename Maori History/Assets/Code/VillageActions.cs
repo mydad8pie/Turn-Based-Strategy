@@ -13,6 +13,9 @@ public class VillageActions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        trainBuilderButton.onClick.AddListener(TrainBuilder);
+        trainWarroirButton.onClick.AddListener(TrainWarrior);
+        trainSettlerButton.onClick.AddListener(TrainSettler);
         
     }
 
@@ -31,9 +34,7 @@ public class VillageActions : MonoBehaviour
             trainWarroirButton.interactable = true;
             trainSettlerButton.interactable = true;
         }
-        trainBuilderButton.onClick.AddListener(TrainBuilder);
-        trainWarroirButton.onClick.AddListener(TrainWarrior);
-        trainSettlerButton.onClick.AddListener(TrainSettler);
+        
     }
 
     public void TrainBuilder()
